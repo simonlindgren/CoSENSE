@@ -8,11 +8,11 @@ export const MainNav = [
 export const SwedenNav = [
     {
         icon: 'pe-7s-diamond',
-        label: 'Twitter',
+        label: 'Social media',
         content: [
             {
-                label: 'Sentiment',
-                to: '#/twitter/sentiment',
+                label: 'Twitter sentiment',
+                to: '#/socialmedia/twitter_sentiment',
             },
             // {
             //     label: 'Dropdowns',

@@ -85,13 +85,12 @@ const AppMain = () => {
                 <div className="loader-container">
                     <div className="loader-container-inner">
                         <h6 className="mt-3">
-                            Please wait while we load all the Elements examples
-                            <small>Because this is a demonstration we load at once all the Elements examples. This wouldn't happen in a real live app!</small>
+                            Please wait while we load all the Twitter examples...
                         </h6>
                     </div>
                 </div>
             }>
-                <Route path="/twitter" component={Elements}/>
+                <Route path="/socialmedia" component={Elements}/>
             </Suspense>
 
             {/* Dashboard Widgets */}
