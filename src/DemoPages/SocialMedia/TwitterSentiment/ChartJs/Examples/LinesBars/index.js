@@ -28,40 +28,8 @@ export default class ChartJsLinesBars extends React.Component {
                         <Col lg="6">
                             <Card className="main-card mb-3">
                                 <CardBody>
-                                    <CardTitle>Line Chart</CardTitle>
-                                    <LineExample/>
-                                </CardBody>
-                            </Card>
-                        </Col>
-                        <Col lg="6">
-                            <Card className="main-card mb-3">
-                                <CardBody>
-                                    <CardTitle>Anxiety Index</CardTitle>
-                                    <TwitterIndex/>
-                                </CardBody>
-                            </Card>
-                        </Col>
-                        <Col lg="6">
-                            <Card className="main-card mb-3">
-                                <CardBody>
-                                    <CardTitle>Area Chart</CardTitle>
-                                    <LineExample2/>
-                                </CardBody>
-                            </Card>
-                        </Col>
-                        <Col lg="6">
-                            <Card className="main-card mb-3">
-                                <CardBody>
-                                    <CardTitle>Bar Chart</CardTitle>
-                                    <BarExample/>
-                                </CardBody>
-                            </Card>
-                        </Col>
-                        <Col lg="6">
-                            <Card className="main-card mb-3">
-                                <CardBody>
-                                    <CardTitle>Horizontal Bar Chart</CardTitle>
-                                    <HorizontalBarExample/>
+                                    <CardTitle>Health</CardTitle>
+                                    <TwitterIndex indexTypes={["anxietyIndex", "fearIndex"]}/>
                                 </CardBody>
                             </Card>
                         </Col>

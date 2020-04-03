@@ -2,15 +2,34 @@ import React from 'react';
 import {Line} from 'react-chartjs-2';
 import TWITTER_SENTIMENT_DATA from './twitterSentiment'
 
-const initialState = {
-  labels: [],
-  datasets: [
-    {
-      label: 'Anxiety index',
+const CHART_OPTIONS = {
+  scales: {
+    xAxes: [{
+      ticks: {
+        autoSkip: true,
+        maxTicksLimit: 20
+      }
+    }]
+  }
+}
+
+const INDEXES = {
+  anxietyIndex: {
+    label: "Anxiety index",
+    borderColor: 'rgba(75,192,192,1)',
+  },
+  fearIndex: {
+    label: "Fear index",
+    borderColor: 'rgba(192,192,192,1)',
+  },
+}
+
+const getDataSet = (indexType, data) => ({
+      label: INDEXES[indexType].label,
       fill: false,
       lineTension: 0.1,
       backgroundColor: 'rgba(75,192,192,0.4)',
-      borderColor: 'rgba(75,192,192,1)',
+      borderColor: INDEXES[indexType].borderColor,
       borderCapStyle: 'round',
       borderDash: [],
       borderDashOffset: 0.0,
@@ -24,9 +43,12 @@ const initialState = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: []
-    }
-  ]
+      data,
+});
+
+const initialState = {
+  labels: [],
+  datasets: [],
 };
 
 var createReactClass = require('create-react-class');
@@ -42,31 +64,27 @@ const Graph = createReactClass({
 
     var oldDataSet = _this.state.datasets[0];
 
-    var newLabels = [];
+    var dates = Object.keys(TWITTER_SENTIMENT_DATA);
     var newData = [];
 
-    Object.keys(TWITTER_SENTIMENT_DATA).forEach(function(key) {
-      newLabels.push(key);
-      newData.push(TWITTER_SENTIMENT_DATA[key]['anxietyIndex']);
+    const datasets = this.props.indexTypes.map((indexType) => {
+      const data = dates.map((date) => 
+        TWITTER_SENTIMENT_DATA[date][indexType]
+      );
+      return getDataSet(indexType, data);
     });
-
-    var newDataSet = {
-      ...oldDataSet
-    };
-
-    newDataSet.data = newData;
-
+   
     var newState = {
       ...initialState,
-      labels: newLabels,
-      datasets: [newDataSet]
+      labels: dates,
+      datasets
     };
 
     _this.setState(newState);
   },
   render() {
     return (
-        <Line data={this.state} />
+        <Line data={this.state} options={CHART_OPTIONS} />
     );
   }
 });
@@ -74,9 +92,10 @@ const Graph = createReactClass({
 class TwitterIndex extends React.Component {
 
   render() {
+
     return (
         <div>
-          <Graph />
+          <Graph indexTypes={this.props.indexTypes} />
         </div>
     )
   }

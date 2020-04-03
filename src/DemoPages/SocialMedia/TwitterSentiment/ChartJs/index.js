@@ -10,7 +10,7 @@ import ChartJsLinesBars from './Examples/LinesBars';
 
 const tabsContent = [
     {
-        title: 'Lines & Bars Charts',
+        title: 'Index',
         content: <ChartJsLinesBars/>
     },
     // {
