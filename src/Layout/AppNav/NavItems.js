@@ -7,7 +7,7 @@ export const MainNav = [
 ];
 export const SwedenNav = [
     {
-        icon: 'pe-7s-diamond',
+        icon: 'lnr-smartphone',
         label: 'Social media',
         content: [
             {
