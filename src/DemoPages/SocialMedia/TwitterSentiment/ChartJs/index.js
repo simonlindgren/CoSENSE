@@ -33,8 +33,8 @@ export default class ChartJSExamples extends Component {
         return (
             <Fragment>
                 <PageTitle
-                    heading="ChartJS"
-                    subheading="Huge selection of charts created with the React ChartJS Plugin"
+                    heading="Twitter sentiment"
+                    subheading="Sentiment analysis performed on Swedish tweets"
                     icon="pe-7s-bandaid icon-gradient bg-amy-crisp"
                 />
                 <Tabs tabsWrapperClass="body-tabs body-tabs-layout" transform={false} showInkBar={true} items={getTabs()}/>
