@@ -1,6 +1,10 @@
 import React, {Fragment} from 'react';
 import {Route} from 'react-router-dom';
 
+// TWITTER SENTIMENT
+
+import ChartsChartJs from './TwitterSentiment/ChartJs'
+
 // BUTTONS
 
 // Standard
@@ -50,7 +54,7 @@ const Elements = ({match}) => (
 
                     {/* Buttons */}
 
-                    <Route path={`${match.url}/twitter_sentiment`} component={ButtonsStandard}/>
+                    <Route path={`${match.url}/twitter_sentiment`} component={ChartsChartJs}/>
 
                     {/* Dropdowns */}
 

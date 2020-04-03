@@ -1,15 +1,15 @@
 import React, {Fragment} from 'react';
 import {Route} from 'react-router-dom';
 
-// Charts
+// TwitterSentiment
 
-import ChartsChartJs from "./ChartJs/";
+import ChartsChartJs from "./ChartJs";
 
 // Layout
 
-import AppHeader from '../../Layout/AppHeader/';
-import AppSidebar from '../../Layout/AppSidebar/';
-import AppFooter from '../../Layout/AppFooter/';
+import AppHeader from '../../../Layout/AppHeader';
+import AppSidebar from '../../../Layout/AppSidebar';
+import AppFooter from '../../../Layout/AppFooter';
 
 const Charts = ({match}) => (
     <Fragment>
@@ -19,7 +19,7 @@ const Charts = ({match}) => (
             <div className="app-main__outer">
                 <div className="app-main__inner">
 
-                    {/* Charts */}
+                    {/* TwitterSentiment */}
 
                     <Route path={`${match.url}/chartjs`} component={ChartsChartJs}/>
 

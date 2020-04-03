@@ -8,9 +8,9 @@ import {
 const Dashboards = lazy(() => import('../../DemoPages/Dashboards'));
 
 const Widgets = lazy(() => import('../../DemoPages/Widgets'));
-const Elements = lazy(() => import('../../DemoPages/SocialMedia'));
+const SocialMedia = lazy(() => import('../../DemoPages/SocialMedia'));
 const Components = lazy(() => import('../../DemoPages/Components'));
-const Charts = lazy(() => import('../../DemoPages/Charts'));
+const Charts = lazy(() => import('../../DemoPages/SocialMedia/TwitterSentiment'));
 const Forms = lazy(() => import('../../DemoPages/Forms'));
 const Tables = lazy(() => import('../../DemoPages/Tables'));
 
@@ -49,7 +49,7 @@ const AppMain = () => {
                 <Route path="/forms" component={Forms}/>
             </Suspense>
 
-            {/* Charts */}
+            {/* TwitterSentiment */}
 
             <Suspense fallback={
                 <div className="loader-container">
@@ -90,7 +90,7 @@ const AppMain = () => {
                     </div>
                 </div>
             }>
-                <Route path="/socialmedia" component={Elements}/>
+                <Route path="/socialmedia" component={SocialMedia}/>
             </Suspense>
 
             {/* Dashboard Widgets */}

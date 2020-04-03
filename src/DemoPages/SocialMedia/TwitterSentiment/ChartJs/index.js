@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 
 import Tabs from 'react-responsive-tabs';
 
-import PageTitle from '../../../Layout/AppMain/PageTitle';
+import PageTitle from '../../../../Layout/AppMain/PageTitle';
 
 // Examples
 import ChartJsCircular from './Examples/Circular';
