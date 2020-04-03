@@ -91,7 +91,7 @@ const AppMain = () => {
                     </div>
                 </div>
             }>
-                <Route path="/elements" component={Elements}/>
+                <Route path="/twitter" component={Elements}/>
             </Suspense>
 
             {/* Dashboard Widgets */}

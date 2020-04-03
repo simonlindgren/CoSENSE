@@ -50,7 +50,7 @@ const Elements = ({match}) => (
 
                     {/* Buttons */}
 
-                    <Route path={`${match.url}/buttons-standard`} component={ButtonsStandard}/>
+                    <Route path={`${match.url}/sentiment`} component={ButtonsStandard}/>
 
                     {/* Dropdowns */}
 
