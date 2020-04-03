@@ -5,49 +5,49 @@ export const MainNav = [
         to: '#/dashboards/basic',
     },
 ];
-export const ComponentsNav = [
+export const SwedenNav = [
     {
         icon: 'pe-7s-diamond',
-        label: 'Elements',
+        label: 'Twitter',
         content: [
             {
-                label: 'Standard Buttons',
-                to: '#/elements/buttons-standard',
+                label: 'Sentiment',
+                to: '#/twitter/sentiment',
             },
-            {
-                label: 'Dropdowns',
-                to: '#/elements/dropdowns',
-
-            },
-            {
-                label: 'Icons',
-                to: '#/elements/icons',
-            },
-            {
-                label: 'Badges',
-                to: '#/elements/badges-labels',
-            },
-            {
-                label: 'Cards',
-                to: '#/elements/cards',
-            },
-            {
-                label: 'List Groups',
-                to: '#/elements/list-group',
-            },
-            {
-                label: 'Navigation Menus',
-                to: '#/elements/navigation',
-            },
-            {
-                label: 'Utilities',
-                to: '#/elements/utilities',
-            },
+            // {
+            //     label: 'Dropdowns',
+            //     to: '#/elements/dropdowns',
+            //
+            // },
+            // {
+            //     label: 'Icons',
+            //     to: '#/elements/icons',
+            // },
+            // {
+            //     label: 'Badges',
+            //     to: '#/elements/badges-labels',
+            // },
+            // {
+            //     label: 'Cards',
+            //     to: '#/elements/cards',
+            // },
+            // {
+            //     label: 'List Groups',
+            //     to: '#/elements/list-group',
+            // },
+            // {
+            //     label: 'Navigation Menus',
+            //     to: '#/elements/navigation',
+            // },
+            // {
+            //     label: 'Utilities',
+            //     to: '#/elements/utilities',
+            // },
         ],
     },
     {
         icon: 'pe-7s-car',
-        label: 'Components',
+        label: 'GDELT',
         content: [
             {
                 label: 'Tabs',
