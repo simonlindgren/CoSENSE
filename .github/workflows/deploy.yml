@@ -1,0 +1,65 @@
+name: covid-sentiment push to ECR and deploy to ELB
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-push-deploy:
+    name: Building and pushing image to AWS ECR
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: Build, tag, and push image to Amazon ECR
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY: covid-sentiment
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+
+    - name: Logout of Amazon ECR
+      if: always()
+      run: docker logout ${{ steps.login-ecr.outputs.registry }}
+
+    - name: Create deployment
+      env:
+        AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
+        AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+        ECR_REPOSITORY: covid-sentiment
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        sed -i "s/<AWS_ACCOUNT_ID>/$AWS_ACCOUNT_ID/g" Dockerrun.aws.json
+        sed -i "s/<AWS_DEFAULT_REGION>/$AWS_DEFAULT_REGION/g" Dockerrun.aws.json
+        sed -i "s/<ECR_REPOSITORY>/$ECR_REPOSITORY/g" Dockerrun.aws.json
+        sed -i "s/<IMAGE_TAG>/$IMAGE_TAG/g" Dockerrun.aws.json
+
+    - name: Deploy to EB
+      uses: einaregilsson/beanstalk-deploy@v9
+      with:
+        aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        application_name: covid-sentiment
+        environment_name: ${{ secrets.BEANSTALK_ENV_NAME }}
+        version_label: ${{ github.run_id }}
+        region: ${{ secrets.AWS_DEFAULT_REGION }}
+        deployment_package: Dockerrun.aws.json
+
+    - name: Deployed!
+      run: echo App deployed to ELB
