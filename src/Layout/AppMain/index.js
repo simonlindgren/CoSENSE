@@ -8,7 +8,7 @@ import {
 const Dashboards = lazy(() => import('../../DemoPages/Dashboards'));
 
 const Widgets = lazy(() => import('../../DemoPages/Widgets'));
-const Elements = lazy(() => import('../../DemoPages/Elements'));
+const Elements = lazy(() => import('../../DemoPages/SocialMedia'));
 const Components = lazy(() => import('../../DemoPages/Components'));
 const Charts = lazy(() => import('../../DemoPages/Charts'));
 const Forms = lazy(() => import('../../DemoPages/Forms'));
@@ -79,7 +79,7 @@ const AppMain = () => {
                 <Route path="/tables" component={Tables}/>
             </Suspense>
 
-            {/* Elements */}
+            {/* SocialMedia */}
 
             <Suspense fallback={
                 <div className="loader-container">

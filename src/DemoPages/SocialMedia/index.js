@@ -25,7 +25,7 @@ import CardsExamples from './Cards/';
 
 // LIST GROUP
 
-import ListGroupExample from '../Elements/ListGroup/';
+import ListGroupExample from '../SocialMedia/ListGroup/';
 
 // NAVIGATION
 
@@ -33,7 +33,7 @@ import NavigationExample from './Navs/';
 
 // UTILITIES
 
-import UtilitiesExamples from '../Elements/Utilities/';
+import UtilitiesExamples from '../SocialMedia/Utilities/';
 
 // Layout
 import AppHeader from '../../Layout/AppHeader/';
