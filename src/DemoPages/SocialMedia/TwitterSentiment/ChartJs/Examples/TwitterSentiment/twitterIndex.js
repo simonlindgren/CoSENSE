@@ -61,7 +61,7 @@ const Graph = createReactClass({
       labels: newLabels,
       datasets: [newDataSet]
     };
-    console.log(newState);
+
     _this.setState(newState);
   },
   render() {
@@ -71,7 +71,7 @@ const Graph = createReactClass({
   }
 });
 
-class AnxietyIndex extends React.Component {
+class TwitterIndex extends React.Component {
 
   render() {
     return (
@@ -83,4 +83,4 @@ class AnxietyIndex extends React.Component {
 }
 
 
-export default AnxietyIndex;
+export default TwitterIndex;

@@ -5,6 +5,7 @@ import LineExample2 from '../line2';
 import BarExample from '../bar';
 import HorizontalBarExample from '../horizontalBar';
 import MixExample from '../mix';
+import TwitterIndex from '../TwitterSentiment/twitterIndex'
 
 import {
     Row, Col,
@@ -35,8 +36,8 @@ export default class ChartJsLinesBars extends React.Component {
                         <Col lg="6">
                             <Card className="main-card mb-3">
                                 <CardBody>
-                                    <CardTitle>Animated Line Chart</CardTitle>
-                                    <MixExample/>
+                                    <CardTitle>Anxiety Index</CardTitle>
+                                    <TwitterIndex/>
                                 </CardBody>
                             </Card>
                         </Col>
