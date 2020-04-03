@@ -29,9 +29,9 @@ export default class ButtonsStandard extends React.Component {
         return (
             <Fragment>
                 <PageTitle
-                    heading="Standard Buttons"
-                    subheading="Wide selection of buttons that feature different styles for backgrounds, borders and hover options!"
-                    icon="pe-7s-plane icon-gradient bg-tempting-azure"
+                    heading="Twitter sentiment"
+                    subheading="Sentiment analysis over Tweets in Sweden"
+                    icon="pe-7s-like icon-gradient bg-tempting-azure"
                 />
                 <Tabs tabsWrapperClass="body-tabs body-tabs-layout" transform={false} showInkBar={true} items={getTabs()}/>
             </Fragment>
