@@ -10,13 +10,13 @@ import ChartJsLinesBars from './Examples/LinesBars';
 
 const tabsContent = [
     {
-        title: 'Circular Charts',
-        content: <ChartJsCircular/>
-    },
-    {
         title: 'Lines & Bars Charts',
         content: <ChartJsLinesBars/>
     },
+    // {
+    //     title: 'Circular Charts',
+    //     content: <ChartJsCircular/>
+    // },
 ];
 
 function getTabs() {
