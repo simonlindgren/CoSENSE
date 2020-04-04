@@ -28,8 +28,76 @@ export default class ChartJsLinesBars extends React.Component {
                         <Col lg="6">
                             <Card className="main-card mb-3">
                                 <CardBody>
-                                    <CardTitle>Health</CardTitle>
-                                    <TwitterIndex indexTypes={["anxietyIndex", "fearIndex"]}/>
+                                    <CardTitle>Twitter index</CardTitle>
+                                    <TwitterIndex indexTypes={
+                                        {
+                                            disease: ["diseaseIndex"],
+                                            emotion: ["emotionIndex"],
+                                            relation: ["relationIndex"],
+                                            economy: ["economyIndex"],
+                                            political: ["politicalIndex"],
+                                        }
+                                    }/>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col lg="6">
+                            <Card className="main-card mb-3">
+                                <CardBody>
+                                    <CardTitle>Disease</CardTitle>
+                                    <TwitterIndex indexTypes={
+                                        {
+                                            disease: ["health", "death", "bio", "body"],
+                                        }
+                                    }/>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col lg="6">
+                            <Card className="main-card mb-3">
+                                <CardBody>
+                                    <CardTitle>Emotion</CardTitle>
+                                    <TwitterIndex indexTypes={
+                                        {
+                                            emotion: ["feel", "negemo", "affect", "anger", "sweat", "anxiety", "sad", "posemo"],
+                                        }
+                                    }/>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col lg="6">
+                            <Card className="main-card mb-3">
+                                <CardBody>
+                                    <CardTitle>Relation</CardTitle>
+                                    <TwitterIndex indexTypes={
+                                        {
+                                            relation: ["friend", "family", "social"],
+                                        }
+                                    }/>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col lg="6">
+                            <Card className="main-card mb-3">
+                                <CardBody>
+                                    <CardTitle>Relation</CardTitle>
+                                    <TwitterIndex indexTypes={
+                                        {
+                                            economy: ["money", "work"],
+                                        }
+                                    }/>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col lg="6">
+                            <Card className="main-card mb-3">
+                                <CardBody>
+                                    <CardTitle>Political</CardTitle>
+                                    <TwitterIndex indexTypes={
+                                        {
+                                            political: ["power", "cause", "certain", "insight", "compare", "risk", "interogate", "future", "number", "relig", "tentat", "quant"]
+                                        }
+                                    }/>
                                 </CardBody>
                             </Card>
                         </Col>

@@ -1,224 +1,2795 @@
 const TWITTER_SENTIMENT_DATA = {
     "2020-01-01": {
-        "anxietyIndex": 12,
-        "fearIndex": 9,
-        "rationalityIndex": 5
+        "disease": {"diseaseIndex": 20, "health": 6, "death": 0, "bio": 6, "body": 5},
+        "emotion": {
+            "emotionIndex": 12,
+            "feel": 0,
+            "negemo": 8,
+            "affect": 2,
+            "anger": 0,
+            "swear": 1,
+            "anxiety": 2,
+            "sad": 3,
+            "posemo": -3
+        },
+        "relation": {"relationIndex": 2, "friend": 5, "family": -1, "social": 1},
+        "economy": {"economyIndex": -3, "money": 4, "work": 4},
+        "political": {
+            "politicalIndex": 14,
+            "power": 1,
+            "cause": 3,
+            "certain": -3,
+            "insight": -4,
+            "compare": 2,
+            "risk": 1,
+            "interogate": 5,
+            "future": 4,
+            "number": 3,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -3
+        }
     },
     "2020-01-02": {
-        "anxietyIndex": 13,
-        "fearIndex": 15,
-        "rationalityIndex": 4
+        "disease": {"diseaseIndex": 19, "health": 4, "death": 5, "bio": 3, "body": 7},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 3,
+            "negemo": 1,
+            "affect": -1,
+            "anger": -3,
+            "swear": 5,
+            "anxiety": 8,
+            "sad": 2,
+            "posemo": 3
+        },
+        "relation": {"relationIndex": 9, "friend": 0, "family": 1, "social": 1},
+        "economy": {"economyIndex": 3, "money": 3, "work": 3},
+        "political": {
+            "politicalIndex": 12,
+            "power": 1,
+            "cause": 3,
+            "certain": -2,
+            "insight": 5,
+            "compare": 2,
+            "risk": 2,
+            "interogate": 7,
+            "future": 1,
+            "number": 2,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 3
+        }
     },
     "2020-01-03": {
-        "anxietyIndex": 15,
-        "fearIndex": 16,
-        "rationalityIndex": 4
+        "disease": {"diseaseIndex": 18, "health": 1, "death": -1, "bio": 2, "body": 0},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 2,
+            "negemo": -1,
+            "affect": -4,
+            "anger": 0,
+            "swear": 8,
+            "anxiety": -1,
+            "sad": 4,
+            "posemo": 6
+        },
+        "relation": {"relationIndex": 9, "friend": -2, "family": 4, "social": 2},
+        "economy": {"economyIndex": 0, "money": 5, "work": 1},
+        "political": {
+            "politicalIndex": 15,
+            "power": -1,
+            "cause": 3,
+            "certain": -5,
+            "insight": -1,
+            "compare": 6,
+            "risk": 2,
+            "interogate": 2,
+            "future": -4,
+            "number": 1,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -2
+        }
     },
     "2020-01-04": {
-        "anxietyIndex": 12,
-        "fearIndex": 16,
-        "rationalityIndex": 6
+        "disease": {"diseaseIndex": 22, "health": 1, "death": -1, "bio": 2, "body": 1},
+        "emotion": {
+            "emotionIndex": 12,
+            "feel": 1,
+            "negemo": 2,
+            "affect": 0,
+            "anger": -1,
+            "swear": 2,
+            "anxiety": 7,
+            "sad": 0,
+            "posemo": -1
+        },
+        "relation": {"relationIndex": 6, "friend": 6, "family": 4, "social": 0},
+        "economy": {"economyIndex": -2, "money": 1, "work": 2},
+        "political": {
+            "politicalIndex": 22,
+            "power": 1,
+            "cause": 2,
+            "certain": 4,
+            "insight": 1,
+            "compare": 7,
+            "risk": 5,
+            "interogate": 2,
+            "future": 6,
+            "number": 2,
+            "relig": 5,
+            "tentat": 8,
+            "quant": 4
+        }
     },
     "2020-01-05": {
-        "anxietyIndex": 9,
-        "fearIndex": 16,
-        "rationalityIndex": 7
+        "disease": {"diseaseIndex": 17, "health": -1, "death": 0, "bio": 2, "body": 8},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 3,
+            "negemo": 1,
+            "affect": 6,
+            "anger": -6,
+            "swear": 4,
+            "anxiety": 2,
+            "sad": 4,
+            "posemo": -5
+        },
+        "relation": {"relationIndex": 6, "friend": 1, "family": 3, "social": -2},
+        "economy": {"economyIndex": 0, "money": 1, "work": 1},
+        "political": {
+            "politicalIndex": 22,
+            "power": 1,
+            "cause": 4,
+            "certain": 1,
+            "insight": 3,
+            "compare": 0,
+            "risk": 2,
+            "interogate": 4,
+            "future": 4,
+            "number": 2,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 2
+        }
     },
     "2020-01-06": {
-        "anxietyIndex": 8,
-        "fearIndex": 17,
-        "rationalityIndex": 9
+        "disease": {"diseaseIndex": 22, "health": 8, "death": -1, "bio": 4, "body": 0},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 3,
+            "negemo": 6,
+            "affect": 4,
+            "anger": 4,
+            "swear": 7,
+            "anxiety": 2,
+            "sad": 5,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 7, "friend": 3, "family": 2, "social": 0},
+        "economy": {"economyIndex": 5, "money": 5, "work": 1},
+        "political": {
+            "politicalIndex": 19,
+            "power": 1,
+            "cause": 3,
+            "certain": -2,
+            "insight": 2,
+            "compare": 1,
+            "risk": 6,
+            "interogate": 1,
+            "future": 2,
+            "number": 2,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 0
+        }
     },
     "2020-01-07": {
-        "anxietyIndex": 9,
-        "fearIndex": 14,
-        "rationalityIndex": 9
+        "disease": {"diseaseIndex": 16, "health": 0, "death": 3, "bio": 0, "body": 1},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 4,
+            "negemo": 2,
+            "affect": -2,
+            "anger": 0,
+            "swear": 10,
+            "anxiety": 3,
+            "sad": 8,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 11, "friend": 5, "family": 4, "social": 2},
+        "economy": {"economyIndex": 6, "money": -3, "work": 2},
+        "political": {
+            "politicalIndex": 14,
+            "power": 2,
+            "cause": 0,
+            "certain": 3,
+            "insight": 3,
+            "compare": -2,
+            "risk": 0,
+            "interogate": 2,
+            "future": 4,
+            "number": 1,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -1
+        }
     },
     "2020-01-08": {
-        "anxietyIndex": 8,
-        "fearIndex": 13,
-        "rationalityIndex": 8
+        "disease": {"diseaseIndex": 19, "health": -1, "death": 9, "bio": 4, "body": 4},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": -1,
+            "negemo": 0,
+            "affect": 2,
+            "anger": 3,
+            "swear": 6,
+            "anxiety": 1,
+            "sad": 5,
+            "posemo": 1
+        },
+        "relation": {"relationIndex": 8, "friend": -3, "family": 2, "social": 1},
+        "economy": {"economyIndex": 1, "money": 4, "work": 2},
+        "political": {
+            "politicalIndex": 14,
+            "power": 0,
+            "cause": 3,
+            "certain": 1,
+            "insight": -2,
+            "compare": 4,
+            "risk": 2,
+            "interogate": 1,
+            "future": 0,
+            "number": 3,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 4
+        }
     },
     "2020-01-09": {
-        "anxietyIndex": 5,
-        "fearIndex": 15,
-        "rationalityIndex": 4
+        "disease": {"diseaseIndex": 19, "health": 6, "death": 7, "bio": 5, "body": 6},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 1,
+            "negemo": 2,
+            "affect": -3,
+            "anger": 4,
+            "swear": 1,
+            "anxiety": 7,
+            "sad": 7,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 6, "friend": -3, "family": 1, "social": -2},
+        "economy": {"economyIndex": 3, "money": 2, "work": 4},
+        "political": {
+            "politicalIndex": 13,
+            "power": 0,
+            "cause": 3,
+            "certain": -1,
+            "insight": 9,
+            "compare": 1,
+            "risk": 2,
+            "interogate": 3,
+            "future": 2,
+            "number": 2,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 3
+        }
     },
     "2020-01-10": {
-        "anxietyIndex": 3,
-        "fearIndex": 15,
-        "rationalityIndex": 3
+        "disease": {"diseaseIndex": 18, "health": 0, "death": -1, "bio": 6, "body": 4},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 4,
+            "negemo": 0,
+            "affect": -1,
+            "anger": -3,
+            "swear": 0,
+            "anxiety": 3,
+            "sad": 5,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 7, "friend": 7, "family": 4, "social": 2},
+        "economy": {"economyIndex": 0, "money": 5, "work": 2},
+        "political": {
+            "politicalIndex": 15,
+            "power": 4,
+            "cause": 7,
+            "certain": 0,
+            "insight": 1,
+            "compare": 4,
+            "risk": 3,
+            "interogate": 5,
+            "future": 3,
+            "number": 2,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 1
+        }
     },
     "2020-01-11": {
-        "anxietyIndex": 15,
-        "fearIndex": 16,
-        "rationalityIndex": 2
+        "disease": {"diseaseIndex": 20, "health": 9, "death": 4, "bio": -6, "body": 5},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 3,
+            "negemo": 3,
+            "affect": -3,
+            "anger": 3,
+            "swear": 11,
+            "anxiety": 5,
+            "sad": 0,
+            "posemo": -1
+        },
+        "relation": {"relationIndex": 6, "friend": 6, "family": 2, "social": 1},
+        "economy": {"economyIndex": 6, "money": 5, "work": 0},
+        "political": {
+            "politicalIndex": 19,
+            "power": 1,
+            "cause": 5,
+            "certain": 6,
+            "insight": -7,
+            "compare": 0,
+            "risk": 2,
+            "interogate": 4,
+            "future": -1,
+            "number": 3,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 1
+        }
     },
     "2020-01-12": {
-        "anxietyIndex": 12,
-        "fearIndex": 9,
-        "rationalityIndex": 5
+        "disease": {"diseaseIndex": 19, "health": 6, "death": 1, "bio": -3, "body": 5},
+        "emotion": {
+            "emotionIndex": 8,
+            "feel": 9,
+            "negemo": 4,
+            "affect": -2,
+            "anger": -4,
+            "swear": 6,
+            "anxiety": 6,
+            "sad": 3,
+            "posemo": 0
+        },
+        "relation": {"relationIndex": 7, "friend": 5, "family": 0, "social": 1},
+        "economy": {"economyIndex": 5, "money": 3, "work": 0},
+        "political": {
+            "politicalIndex": 16,
+            "power": 2,
+            "cause": 1,
+            "certain": 1,
+            "insight": 1,
+            "compare": 1,
+            "risk": 6,
+            "interogate": 6,
+            "future": 5,
+            "number": 2,
+            "relig": 5,
+            "tentat": 8,
+            "quant": 3
+        }
     },
     "2020-01-13": {
-        "anxietyIndex": 13,
-        "fearIndex": 15,
-        "rationalityIndex": 4
+        "disease": {"diseaseIndex": 15, "health": 11, "death": 7, "bio": 4, "body": 4},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": -4,
+            "negemo": 2,
+            "affect": 5,
+            "anger": -5,
+            "swear": 2,
+            "anxiety": 6,
+            "sad": 6,
+            "posemo": -1
+        },
+        "relation": {"relationIndex": 9, "friend": -2, "family": 1, "social": -2},
+        "economy": {"economyIndex": 3, "money": 5, "work": 2},
+        "political": {
+            "politicalIndex": 12,
+            "power": 1,
+            "cause": 3,
+            "certain": 0,
+            "insight": -1,
+            "compare": 0,
+            "risk": 2,
+            "interogate": 5,
+            "future": 2,
+            "number": 1,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 2
+        }
     },
     "2020-01-14": {
-        "anxietyIndex": 15,
-        "fearIndex": 16,
-        "rationalityIndex": 4
+        "disease": {"diseaseIndex": 24, "health": -2, "death": 0, "bio": 1, "body": 0},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 4,
+            "negemo": 2,
+            "affect": -3,
+            "anger": 1,
+            "swear": 3,
+            "anxiety": 8,
+            "sad": 3,
+            "posemo": 1
+        },
+        "relation": {"relationIndex": 6, "friend": -1, "family": 2, "social": -1},
+        "economy": {"economyIndex": 5, "money": 7, "work": 3},
+        "political": {
+            "politicalIndex": 12,
+            "power": 1,
+            "cause": 4,
+            "certain": 5,
+            "insight": -2,
+            "compare": 4,
+            "risk": 0,
+            "interogate": 1,
+            "future": 8,
+            "number": 5,
+            "relig": 5,
+            "tentat": 5,
+            "quant": -2
+        }
     },
     "2020-01-15": {
-        "anxietyIndex": 12,
-        "fearIndex": 16,
-        "rationalityIndex": 6
+        "disease": {"diseaseIndex": 21, "health": 4, "death": 2, "bio": -2, "body": -1},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 1,
+            "negemo": 9,
+            "affect": 0,
+            "anger": 1,
+            "swear": 9,
+            "anxiety": -1,
+            "sad": 4,
+            "posemo": -4
+        },
+        "relation": {"relationIndex": 8, "friend": 0, "family": -1, "social": 2},
+        "economy": {"economyIndex": 1, "money": 3, "work": 2},
+        "political": {
+            "politicalIndex": 20,
+            "power": 3,
+            "cause": 6,
+            "certain": -3,
+            "insight": 6,
+            "compare": 2,
+            "risk": 6,
+            "interogate": 4,
+            "future": 0,
+            "number": 2,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 2
+        }
     },
     "2020-01-16": {
-        "anxietyIndex": 9,
-        "fearIndex": 16,
-        "rationalityIndex": 7
+        "disease": {"diseaseIndex": 19, "health": 6, "death": -2, "bio": 4, "body": -2},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 3,
+            "negemo": 1,
+            "affect": -1,
+            "anger": -2,
+            "swear": 1,
+            "anxiety": -2,
+            "sad": -3,
+            "posemo": -1
+        },
+        "relation": {"relationIndex": 12, "friend": 8, "family": -3, "social": -1},
+        "economy": {"economyIndex": 5, "money": -2, "work": 1},
+        "political": {
+            "politicalIndex": 11,
+            "power": 2,
+            "cause": 0,
+            "certain": -2,
+            "insight": -1,
+            "compare": 3,
+            "risk": 3,
+            "interogate": 3,
+            "future": -2,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -3
+        }
     },
     "2020-01-17": {
-        "anxietyIndex": 8,
-        "fearIndex": 17,
-        "rationalityIndex": 9
+        "disease": {"diseaseIndex": 19, "health": 3, "death": 0, "bio": -1, "body": 0},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 1,
+            "negemo": 3,
+            "affect": 0,
+            "anger": -5,
+            "swear": 2,
+            "anxiety": 5,
+            "sad": 4,
+            "posemo": 5
+        },
+        "relation": {"relationIndex": 6, "friend": -1, "family": -1, "social": 1},
+        "economy": {"economyIndex": 4, "money": 2, "work": 3},
+        "political": {
+            "politicalIndex": 16,
+            "power": 1,
+            "cause": 2,
+            "certain": 1,
+            "insight": 5,
+            "compare": 2,
+            "risk": 6,
+            "interogate": 2,
+            "future": 4,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 1
+        }
     },
     "2020-01-18": {
-        "anxietyIndex": 9,
-        "fearIndex": 14,
-        "rationalityIndex": 9
+        "disease": {"diseaseIndex": 22, "health": 6, "death": 2, "bio": 2, "body": 2},
+        "emotion": {
+            "emotionIndex": 8,
+            "feel": 3,
+            "negemo": 1,
+            "affect": 7,
+            "anger": 3,
+            "swear": 9,
+            "anxiety": 0,
+            "sad": 2,
+            "posemo": 7
+        },
+        "relation": {"relationIndex": 8, "friend": 3, "family": 0, "social": 1},
+        "economy": {"economyIndex": 10, "money": 0, "work": 1},
+        "political": {
+            "politicalIndex": 17,
+            "power": 1,
+            "cause": 4,
+            "certain": 3,
+            "insight": 1,
+            "compare": 4,
+            "risk": 0,
+            "interogate": 7,
+            "future": 5,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -1
+        }
     },
     "2020-01-19": {
-        "anxietyIndex": 8,
-        "fearIndex": 13,
-        "rationalityIndex": 8
+        "disease": {"diseaseIndex": 20, "health": 0, "death": 2, "bio": -3, "body": 4},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 7,
+            "negemo": 3,
+            "affect": 5,
+            "anger": -2,
+            "swear": 1,
+            "anxiety": 6,
+            "sad": 4,
+            "posemo": 5
+        },
+        "relation": {"relationIndex": 6, "friend": 3, "family": -3, "social": 3},
+        "economy": {"economyIndex": 6, "money": 0, "work": 3},
+        "political": {
+            "politicalIndex": 14,
+            "power": 1,
+            "cause": 5,
+            "certain": 5,
+            "insight": -7,
+            "compare": 3,
+            "risk": 5,
+            "interogate": 5,
+            "future": 3,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -1
+        }
     },
     "2020-01-20": {
-        "anxietyIndex": 5,
-        "fearIndex": 15,
-        "rationalityIndex": 4
+        "disease": {"diseaseIndex": 20, "health": 7, "death": 2, "bio": 7, "body": 2},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 3,
+            "negemo": 6,
+            "affect": 2,
+            "anger": 0,
+            "swear": 3,
+            "anxiety": 4,
+            "sad": 4,
+            "posemo": -1
+        },
+        "relation": {"relationIndex": 5, "friend": 4, "family": -1, "social": 1},
+        "economy": {"economyIndex": 3, "money": 3, "work": 0},
+        "political": {
+            "politicalIndex": 8,
+            "power": 1,
+            "cause": 6,
+            "certain": 3,
+            "insight": 3,
+            "compare": 3,
+            "risk": 2,
+            "interogate": 4,
+            "future": 10,
+            "number": 4,
+            "relig": 5,
+            "tentat": 4,
+            "quant": 0
+        }
     },
     "2020-01-21": {
-        "anxietyIndex": 3,
-        "fearIndex": 15,
-        "rationalityIndex": 3
+        "disease": {"diseaseIndex": 18, "health": 2, "death": 1, "bio": 2, "body": -2},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 8,
+            "negemo": -3,
+            "affect": 6,
+            "anger": -4,
+            "swear": 2,
+            "anxiety": 5,
+            "sad": 4,
+            "posemo": -7
+        },
+        "relation": {"relationIndex": 6, "friend": 0, "family": 0, "social": 0},
+        "economy": {"economyIndex": 4, "money": 0, "work": 2},
+        "political": {
+            "politicalIndex": 12,
+            "power": -1,
+            "cause": 3,
+            "certain": 1,
+            "insight": 2,
+            "compare": 0,
+            "risk": 3,
+            "interogate": 2,
+            "future": 3,
+            "number": 2,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 2
+        }
     },
     "2020-01-22": {
-        "anxietyIndex": 15,
-        "fearIndex": 16,
-        "rationalityIndex": 2
+        "disease": {"diseaseIndex": 19, "health": 4, "death": 2, "bio": 2, "body": 2},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 1,
+            "negemo": 4,
+            "affect": 3,
+            "anger": -2,
+            "swear": 9,
+            "anxiety": 12,
+            "sad": 6,
+            "posemo": -1
+        },
+        "relation": {"relationIndex": 10, "friend": 6, "family": 1, "social": 0},
+        "economy": {"economyIndex": 4, "money": 0, "work": 2},
+        "political": {
+            "politicalIndex": 15,
+            "power": 1,
+            "cause": 1,
+            "certain": -3,
+            "insight": 0,
+            "compare": 5,
+            "risk": 1,
+            "interogate": 4,
+            "future": -4,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 0
+        }
     },
     "2020-01-23": {
-        "anxietyIndex": 12,
-        "fearIndex": 9,
-        "rationalityIndex": 5
+        "disease": {"diseaseIndex": 23, "health": 1, "death": 0, "bio": -4, "body": 4},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 3,
+            "negemo": 2,
+            "affect": 0,
+            "anger": 2,
+            "swear": 8,
+            "anxiety": 6,
+            "sad": 1,
+            "posemo": 7
+        },
+        "relation": {"relationIndex": 10, "friend": 2, "family": 3, "social": 0},
+        "economy": {"economyIndex": 7, "money": 0, "work": 3},
+        "political": {
+            "politicalIndex": 14,
+            "power": 5,
+            "cause": 6,
+            "certain": 0,
+            "insight": 2,
+            "compare": -1,
+            "risk": 4,
+            "interogate": 3,
+            "future": 1,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 2
+        }
     },
     "2020-01-24": {
-        "anxietyIndex": 13,
-        "fearIndex": 15,
-        "rationalityIndex": 4
+        "disease": {"diseaseIndex": 20, "health": 9, "death": 1, "bio": -4, "body": 2},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 4,
+            "negemo": -4,
+            "affect": -4,
+            "anger": 0,
+            "swear": 4,
+            "anxiety": 6,
+            "sad": 5,
+            "posemo": -3
+        },
+        "relation": {"relationIndex": 9, "friend": -2, "family": -2, "social": 3},
+        "economy": {"economyIndex": -3, "money": -1, "work": 3},
+        "political": {
+            "politicalIndex": 18,
+            "power": 2,
+            "cause": 2,
+            "certain": 0,
+            "insight": -1,
+            "compare": 1,
+            "risk": 2,
+            "interogate": 3,
+            "future": 3,
+            "number": 1,
+            "relig": 5,
+            "tentat": 4,
+            "quant": 0
+        }
     },
     "2020-01-25": {
-        "anxietyIndex": 15,
-        "fearIndex": 16,
-        "rationalityIndex": 4
+        "disease": {"diseaseIndex": 24, "health": 5, "death": 5, "bio": -2, "body": 3},
+        "emotion": {
+            "emotionIndex": 12,
+            "feel": 7,
+            "negemo": 2,
+            "affect": -2,
+            "anger": 5,
+            "swear": 3,
+            "anxiety": 6,
+            "sad": 1,
+            "posemo": -3
+        },
+        "relation": {"relationIndex": 8, "friend": 0, "family": 3, "social": 3},
+        "economy": {"economyIndex": 5, "money": 0, "work": 0},
+        "political": {
+            "politicalIndex": 16,
+            "power": 2,
+            "cause": 0,
+            "certain": 5,
+            "insight": 1,
+            "compare": 0,
+            "risk": 6,
+            "interogate": 1,
+            "future": 7,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -5
+        }
     },
     "2020-01-26": {
-        "anxietyIndex": 12,
-        "fearIndex": 16,
-        "rationalityIndex": 6
+        "disease": {"diseaseIndex": 25, "health": 1, "death": -2, "bio": 0, "body": 4},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 6,
+            "negemo": 2,
+            "affect": 2,
+            "anger": 1,
+            "swear": 11,
+            "anxiety": -1,
+            "sad": 4,
+            "posemo": 2
+        },
+        "relation": {"relationIndex": 7, "friend": -1, "family": -1, "social": 1},
+        "economy": {"economyIndex": -1, "money": 3, "work": 2},
+        "political": {
+            "politicalIndex": 19,
+            "power": 1,
+            "cause": 6,
+            "certain": -1,
+            "insight": 0,
+            "compare": 1,
+            "risk": 7,
+            "interogate": 5,
+            "future": 4,
+            "number": 3,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 1
+        }
     },
     "2020-01-27": {
-        "anxietyIndex": 9,
-        "fearIndex": 16,
-        "rationalityIndex": 7
+        "disease": {"diseaseIndex": 19, "health": 6, "death": 0, "bio": -1, "body": 4},
+        "emotion": {
+            "emotionIndex": 12,
+            "feel": 2,
+            "negemo": -2,
+            "affect": 1,
+            "anger": 2,
+            "swear": -2,
+            "anxiety": 8,
+            "sad": 3,
+            "posemo": -1
+        },
+        "relation": {"relationIndex": 9, "friend": 0, "family": -2, "social": 2},
+        "economy": {"economyIndex": 0, "money": 3, "work": 2},
+        "political": {
+            "politicalIndex": 15,
+            "power": 1,
+            "cause": 3,
+            "certain": 0,
+            "insight": -4,
+            "compare": 4,
+            "risk": 5,
+            "interogate": 1,
+            "future": 5,
+            "number": 3,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 1
+        }
     },
     "2020-01-28": {
-        "anxietyIndex": 8,
-        "fearIndex": 17,
-        "rationalityIndex": 9
+        "disease": {"diseaseIndex": 21, "health": 2, "death": 0, "bio": 0, "body": 1},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 4,
+            "negemo": -3,
+            "affect": 4,
+            "anger": 3,
+            "swear": 7,
+            "anxiety": 3,
+            "sad": 2,
+            "posemo": -4
+        },
+        "relation": {"relationIndex": 6, "friend": -1, "family": 3, "social": 3},
+        "economy": {"economyIndex": 11, "money": 1, "work": 2},
+        "political": {
+            "politicalIndex": 13,
+            "power": -1,
+            "cause": 1,
+            "certain": 4,
+            "insight": 2,
+            "compare": 0,
+            "risk": 4,
+            "interogate": 3,
+            "future": 4,
+            "number": 1,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -3
+        }
     },
     "2020-01-29": {
-        "anxietyIndex": 9,
-        "fearIndex": 14,
-        "rationalityIndex": 9
+        "disease": {"diseaseIndex": 21, "health": 1, "death": 8, "bio": 0, "body": 6},
+        "emotion": {
+            "emotionIndex": 8,
+            "feel": 0,
+            "negemo": 3,
+            "affect": 2,
+            "anger": -2,
+            "swear": 2,
+            "anxiety": 9,
+            "sad": 6,
+            "posemo": 1
+        },
+        "relation": {"relationIndex": 7, "friend": -3, "family": -2, "social": 1},
+        "economy": {"economyIndex": -4, "money": 0, "work": 5},
+        "political": {
+            "politicalIndex": 16,
+            "power": 2,
+            "cause": 1,
+            "certain": -1,
+            "insight": 6,
+            "compare": -1,
+            "risk": 1,
+            "interogate": 5,
+            "future": 0,
+            "number": 2,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 2
+        }
     },
     "2020-01-30": {
-        "anxietyIndex": 8,
-        "fearIndex": 13,
-        "rationalityIndex": 8
+        "disease": {"diseaseIndex": 20, "health": 4, "death": 1, "bio": 4, "body": 0},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 2,
+            "negemo": -2,
+            "affect": 1,
+            "anger": -3,
+            "swear": 1,
+            "anxiety": 3,
+            "sad": 3,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 9, "friend": 3, "family": 0, "social": -2},
+        "economy": {"economyIndex": 8, "money": 4, "work": 1},
+        "political": {
+            "politicalIndex": 12,
+            "power": 1,
+            "cause": 1,
+            "certain": 4,
+            "insight": -8,
+            "compare": 0,
+            "risk": 5,
+            "interogate": 5,
+            "future": -2,
+            "number": 4,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -1
+        }
     },
     "2020-01-31": {
-        "anxietyIndex": 5,
-        "fearIndex": 15,
-        "rationalityIndex": 4
+        "disease": {"diseaseIndex": 23, "health": -3, "death": 8, "bio": -4, "body": 5},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 2,
+            "negemo": -4,
+            "affect": 1,
+            "anger": 1,
+            "swear": 3,
+            "anxiety": 0,
+            "sad": 3,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 7, "friend": 1, "family": 4, "social": 3},
+        "economy": {"economyIndex": 7, "money": 0, "work": 3},
+        "political": {
+            "politicalIndex": 17,
+            "power": 2,
+            "cause": 0,
+            "certain": 4,
+            "insight": 3,
+            "compare": 1,
+            "risk": 0,
+            "interogate": 3,
+            "future": 1,
+            "number": 1,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 2
+        }
     },
     "2020-02-01": {
-        "anxietyIndex": 3,
-        "fearIndex": 15,
-        "rationalityIndex": 3
+        "disease": {"diseaseIndex": 18, "health": 3, "death": -1, "bio": 1, "body": 0},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 3,
+            "negemo": 7,
+            "affect": 5,
+            "anger": 1,
+            "swear": 6,
+            "anxiety": 5,
+            "sad": 4,
+            "posemo": 3
+        },
+        "relation": {"relationIndex": 8, "friend": 3, "family": -1, "social": 1},
+        "economy": {"economyIndex": 3, "money": 2, "work": 3},
+        "political": {
+            "politicalIndex": 15,
+            "power": 1,
+            "cause": 2,
+            "certain": -2,
+            "insight": -1,
+            "compare": -1,
+            "risk": 5,
+            "interogate": 3,
+            "future": 2,
+            "number": 3,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 3
+        }
     },
     "2020-02-02": {
-        "anxietyIndex": 15,
-        "fearIndex": 16,
-        "rationalityIndex": 2
+        "disease": {"diseaseIndex": 22, "health": 4, "death": -2, "bio": 1, "body": -3},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 3,
+            "negemo": 9,
+            "affect": -1,
+            "anger": 1,
+            "swear": 5,
+            "anxiety": 2,
+            "sad": -3,
+            "posemo": 6
+        },
+        "relation": {"relationIndex": 6, "friend": 12, "family": 0, "social": -1},
+        "economy": {"economyIndex": 10, "money": 6, "work": 1},
+        "political": {
+            "politicalIndex": 15,
+            "power": 3,
+            "cause": 5,
+            "certain": 5,
+            "insight": 6,
+            "compare": 2,
+            "risk": 5,
+            "interogate": 4,
+            "future": 0,
+            "number": 1,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 2
+        }
     },
     "2020-02-03": {
-        "anxietyIndex": 12,
-        "fearIndex": 9,
-        "rationalityIndex": 5
+        "disease": {"diseaseIndex": 20, "health": 2, "death": -5, "bio": 6, "body": 4},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 7,
+            "negemo": 6,
+            "affect": 5,
+            "anger": 7,
+            "swear": 4,
+            "anxiety": 7,
+            "sad": 3,
+            "posemo": 3
+        },
+        "relation": {"relationIndex": 2, "friend": 1, "family": 1, "social": -1},
+        "economy": {"economyIndex": 3, "money": 1, "work": 1},
+        "political": {
+            "politicalIndex": 18,
+            "power": -1,
+            "cause": 2,
+            "certain": -1,
+            "insight": -2,
+            "compare": 2,
+            "risk": 1,
+            "interogate": 4,
+            "future": 2,
+            "number": 3,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 3
+        }
     },
     "2020-02-04": {
-        "anxietyIndex": 13,
-        "fearIndex": 15,
-        "rationalityIndex": 4
+        "disease": {"diseaseIndex": 17, "health": 5, "death": 1, "bio": 4, "body": -3},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 1,
+            "negemo": 0,
+            "affect": 2,
+            "anger": 0,
+            "swear": 7,
+            "anxiety": 3,
+            "sad": 5,
+            "posemo": 2
+        },
+        "relation": {"relationIndex": 6, "friend": 4, "family": 5, "social": -2},
+        "economy": {"economyIndex": 5, "money": 4, "work": 3},
+        "political": {
+            "politicalIndex": 15,
+            "power": 0,
+            "cause": 2,
+            "certain": 3,
+            "insight": 7,
+            "compare": 1,
+            "risk": 6,
+            "interogate": 4,
+            "future": 3,
+            "number": 3,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 3
+        }
     },
     "2020-02-05": {
-        "anxietyIndex": 15,
-        "fearIndex": 16,
-        "rationalityIndex": 4
+        "disease": {"diseaseIndex": 22, "health": -1, "death": 4, "bio": 3, "body": -1},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 2,
+            "negemo": -6,
+            "affect": 1,
+            "anger": 1,
+            "swear": 1,
+            "anxiety": 10,
+            "sad": 6,
+            "posemo": -2
+        },
+        "relation": {"relationIndex": 7, "friend": -6, "family": 1, "social": 0},
+        "economy": {"economyIndex": 4, "money": -5, "work": 2},
+        "political": {
+            "politicalIndex": 15,
+            "power": 1,
+            "cause": 4,
+            "certain": 1,
+            "insight": 1,
+            "compare": 0,
+            "risk": 6,
+            "interogate": 6,
+            "future": 1,
+            "number": 4,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 0
+        }
     },
     "2020-02-06": {
-        "anxietyIndex": 12,
-        "fearIndex": 16,
-        "rationalityIndex": 6
+        "disease": {"diseaseIndex": 19, "health": 8, "death": 3, "bio": 2, "body": 3},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": -1,
+            "negemo": 2,
+            "affect": 1,
+            "anger": 4,
+            "swear": 2,
+            "anxiety": 3,
+            "sad": 0,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 8, "friend": 2, "family": 1, "social": -5},
+        "economy": {"economyIndex": 2, "money": 1, "work": 3},
+        "political": {
+            "politicalIndex": 14,
+            "power": 1,
+            "cause": 2,
+            "certain": 4,
+            "insight": 6,
+            "compare": 3,
+            "risk": 0,
+            "interogate": 4,
+            "future": 0,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 3
+        }
     },
     "2020-02-07": {
-        "anxietyIndex": 9,
-        "fearIndex": 16,
-        "rationalityIndex": 7
+        "disease": {"diseaseIndex": 25, "health": 7, "death": 4, "bio": 1, "body": -3},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": -1,
+            "negemo": 8,
+            "affect": 2,
+            "anger": -5,
+            "swear": 1,
+            "anxiety": 3,
+            "sad": 1,
+            "posemo": 8
+        },
+        "relation": {"relationIndex": 8, "friend": -1, "family": -3, "social": 2},
+        "economy": {"economyIndex": 2, "money": 6, "work": 3},
+        "political": {
+            "politicalIndex": 18,
+            "power": 1,
+            "cause": 3,
+            "certain": 1,
+            "insight": 0,
+            "compare": 3,
+            "risk": 6,
+            "interogate": 4,
+            "future": 3,
+            "number": 1,
+            "relig": 5,
+            "tentat": 4,
+            "quant": 2
+        }
     },
     "2020-02-08": {
-        "anxietyIndex": 8,
-        "fearIndex": 17,
-        "rationalityIndex": 9
+        "disease": {"diseaseIndex": 19, "health": 9, "death": 0, "bio": 8, "body": -3},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": -3,
+            "negemo": 3,
+            "affect": 0,
+            "anger": 2,
+            "swear": 3,
+            "anxiety": 5,
+            "sad": 5,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 12, "friend": 2, "family": 0, "social": 4},
+        "economy": {"economyIndex": 1, "money": 5, "work": 1},
+        "political": {
+            "politicalIndex": 10,
+            "power": 2,
+            "cause": 1,
+            "certain": 0,
+            "insight": 2,
+            "compare": 3,
+            "risk": 6,
+            "interogate": 3,
+            "future": 9,
+            "number": 2,
+            "relig": 5,
+            "tentat": 4,
+            "quant": 3
+        }
     },
     "2020-02-09": {
-        "anxietyIndex": 9,
-        "fearIndex": 14,
-        "rationalityIndex": 9
+        "disease": {"diseaseIndex": 22, "health": 2, "death": 5, "bio": 3, "body": 2},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 5,
+            "negemo": -4,
+            "affect": 4,
+            "anger": -4,
+            "swear": 11,
+            "anxiety": 2,
+            "sad": 7,
+            "posemo": 2
+        },
+        "relation": {"relationIndex": 6, "friend": 5, "family": 4, "social": 3},
+        "economy": {"economyIndex": 4, "money": 0, "work": 1},
+        "political": {
+            "politicalIndex": 13,
+            "power": 0,
+            "cause": 3,
+            "certain": 5,
+            "insight": -4,
+            "compare": 4,
+            "risk": -1,
+            "interogate": 1,
+            "future": 4,
+            "number": 1,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 3
+        }
     },
     "2020-02-10": {
-        "anxietyIndex": 8,
-        "fearIndex": 13,
-        "rationalityIndex": 8
+        "disease": {"diseaseIndex": 19, "health": 4, "death": 6, "bio": 2, "body": 5},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": -1,
+            "negemo": 3,
+            "affect": -1,
+            "anger": 2,
+            "swear": 3,
+            "anxiety": 5,
+            "sad": -5,
+            "posemo": 5
+        },
+        "relation": {"relationIndex": 8, "friend": 6, "family": 0, "social": 2},
+        "economy": {"economyIndex": 4, "money": 0, "work": 1},
+        "political": {
+            "politicalIndex": 16,
+            "power": 0,
+            "cause": 5,
+            "certain": 4,
+            "insight": -5,
+            "compare": 1,
+            "risk": 6,
+            "interogate": 5,
+            "future": -2,
+            "number": 1,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -1
+        }
     },
     "2020-02-11": {
-        "anxietyIndex": 5,
-        "fearIndex": 15,
-        "rationalityIndex": 4
+        "disease": {"diseaseIndex": 20, "health": -1, "death": 1, "bio": -1, "body": 2},
+        "emotion": {
+            "emotionIndex": 12,
+            "feel": 4,
+            "negemo": -1,
+            "affect": 1,
+            "anger": 2,
+            "swear": 6,
+            "anxiety": 2,
+            "sad": -2,
+            "posemo": 1
+        },
+        "relation": {"relationIndex": 8, "friend": 7, "family": -4, "social": 0},
+        "economy": {"economyIndex": 1, "money": 2, "work": 0},
+        "political": {
+            "politicalIndex": 16,
+            "power": 1,
+            "cause": 3,
+            "certain": -3,
+            "insight": 4,
+            "compare": 3,
+            "risk": 5,
+            "interogate": 3,
+            "future": 2,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 0
+        }
     },
     "2020-02-12": {
-        "anxietyIndex": 3,
-        "fearIndex": 15,
-        "rationalityIndex": 3
+        "disease": {"diseaseIndex": 17, "health": 4, "death": 2, "bio": -2, "body": -2},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 2,
+            "negemo": 4,
+            "affect": 2,
+            "anger": 1,
+            "swear": 9,
+            "anxiety": 3,
+            "sad": 4,
+            "posemo": 1
+        },
+        "relation": {"relationIndex": 8, "friend": 7, "family": 2, "social": -4},
+        "economy": {"economyIndex": 4, "money": 1, "work": 2},
+        "political": {
+            "politicalIndex": 18,
+            "power": 0,
+            "cause": 4,
+            "certain": -2,
+            "insight": -1,
+            "compare": 0,
+            "risk": 1,
+            "interogate": 4,
+            "future": 4,
+            "number": 1,
+            "relig": 5,
+            "tentat": 3,
+            "quant": -1
+        }
     },
     "2020-02-13": {
-        "anxietyIndex": 15,
-        "fearIndex": 16,
-        "rationalityIndex": 2
+        "disease": {"diseaseIndex": 21, "health": 1, "death": 3, "bio": -2, "body": 7},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 6,
+            "negemo": 0,
+            "affect": 2,
+            "anger": 0,
+            "swear": 3,
+            "anxiety": 0,
+            "sad": 7,
+            "posemo": 2
+        },
+        "relation": {"relationIndex": 4, "friend": 6, "family": 7, "social": -1},
+        "economy": {"economyIndex": 1, "money": 0, "work": 3},
+        "political": {
+            "politicalIndex": 11,
+            "power": 0,
+            "cause": 2,
+            "certain": 3,
+            "insight": -2,
+            "compare": -1,
+            "risk": 4,
+            "interogate": 5,
+            "future": -3,
+            "number": 1,
+            "relig": 5,
+            "tentat": 8,
+            "quant": 1
+        }
+    },
+    "2020-02-14": {
+        "disease": {"diseaseIndex": 22, "health": 8, "death": 1, "bio": -2, "body": 3},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 4,
+            "negemo": -3,
+            "affect": -1,
+            "anger": -2,
+            "swear": 10,
+            "anxiety": 9,
+            "sad": 1,
+            "posemo": -2
+        },
+        "relation": {"relationIndex": 8, "friend": 2, "family": -5, "social": 3},
+        "economy": {"economyIndex": 6, "money": 2, "work": 1},
+        "political": {
+            "politicalIndex": 16,
+            "power": 1,
+            "cause": 4,
+            "certain": -3,
+            "insight": -2,
+            "compare": 2,
+            "risk": 3,
+            "interogate": 3,
+            "future": 2,
+            "number": 1,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 2
+        }
+    },
+    "2020-02-15": {
+        "disease": {"diseaseIndex": 22, "health": -1, "death": 6, "bio": 0, "body": 3},
+        "emotion": {
+            "emotionIndex": 12,
+            "feel": 6,
+            "negemo": 1,
+            "affect": 0,
+            "anger": 2,
+            "swear": 14,
+            "anxiety": 12,
+            "sad": 3,
+            "posemo": 2
+        },
+        "relation": {"relationIndex": 7, "friend": -3, "family": 5, "social": -2},
+        "economy": {"economyIndex": 5, "money": 6, "work": 1},
+        "political": {
+            "politicalIndex": 12,
+            "power": 3,
+            "cause": 4,
+            "certain": 6,
+            "insight": 5,
+            "compare": 1,
+            "risk": -1,
+            "interogate": 5,
+            "future": 2,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 2
+        }
+    },
+    "2020-02-16": {
+        "disease": {"diseaseIndex": 19, "health": -1, "death": -1, "bio": 4, "body": 3},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 0,
+            "negemo": 2,
+            "affect": -2,
+            "anger": 3,
+            "swear": 4,
+            "anxiety": 7,
+            "sad": 1,
+            "posemo": 0
+        },
+        "relation": {"relationIndex": 10, "friend": -3, "family": -3, "social": -1},
+        "economy": {"economyIndex": 4, "money": -1, "work": 2},
+        "political": {
+            "politicalIndex": 15,
+            "power": 1,
+            "cause": 7,
+            "certain": 2,
+            "insight": 2,
+            "compare": -1,
+            "risk": 4,
+            "interogate": 5,
+            "future": 2,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 4
+        }
+    },
+    "2020-02-17": {
+        "disease": {"diseaseIndex": 18, "health": -2, "death": 4, "bio": 0, "body": 5},
+        "emotion": {
+            "emotionIndex": 8,
+            "feel": 2,
+            "negemo": -1,
+            "affect": 4,
+            "anger": 1,
+            "swear": 5,
+            "anxiety": 3,
+            "sad": 7,
+            "posemo": 2
+        },
+        "relation": {"relationIndex": 10, "friend": -1, "family": -2, "social": 2},
+        "economy": {"economyIndex": 6, "money": 1, "work": 2},
+        "political": {
+            "politicalIndex": 12,
+            "power": 0,
+            "cause": 0,
+            "certain": 4,
+            "insight": 10,
+            "compare": 4,
+            "risk": 8,
+            "interogate": 5,
+            "future": 1,
+            "number": 3,
+            "relig": 5,
+            "tentat": 7,
+            "quant": -1
+        }
+    },
+    "2020-02-18": {
+        "disease": {"diseaseIndex": 20, "health": 5, "death": -1, "bio": -1, "body": 2},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": -1,
+            "negemo": 5,
+            "affect": -1,
+            "anger": 5,
+            "swear": 5,
+            "anxiety": 1,
+            "sad": 4,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 11, "friend": 4, "family": 4, "social": 0},
+        "economy": {"economyIndex": 10, "money": 0, "work": 2},
+        "political": {
+            "politicalIndex": 19,
+            "power": 2,
+            "cause": 9,
+            "certain": -5,
+            "insight": 2,
+            "compare": 2,
+            "risk": 4,
+            "interogate": 4,
+            "future": 5,
+            "number": 3,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 4
+        }
+    },
+    "2020-02-19": {
+        "disease": {"diseaseIndex": 23, "health": 2, "death": 1, "bio": 0, "body": 2},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": -2,
+            "negemo": -1,
+            "affect": 5,
+            "anger": 3,
+            "swear": 7,
+            "anxiety": -1,
+            "sad": 8,
+            "posemo": 1
+        },
+        "relation": {"relationIndex": 7, "friend": -1, "family": -5, "social": 1},
+        "economy": {"economyIndex": 2, "money": 1, "work": 5},
+        "political": {
+            "politicalIndex": 15,
+            "power": 2,
+            "cause": 3,
+            "certain": 3,
+            "insight": 3,
+            "compare": 3,
+            "risk": 4,
+            "interogate": 6,
+            "future": 4,
+            "number": 3,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 1
+        }
+    },
+    "2020-02-20": {
+        "disease": {"diseaseIndex": 19, "health": 6, "death": 0, "bio": 10, "body": 2},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 3,
+            "negemo": -1,
+            "affect": 2,
+            "anger": 1,
+            "swear": 5,
+            "anxiety": -1,
+            "sad": 5,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 7, "friend": 2, "family": 3, "social": 0},
+        "economy": {"economyIndex": -2, "money": -5, "work": 1},
+        "political": {
+            "politicalIndex": 15,
+            "power": 1,
+            "cause": 3,
+            "certain": 2,
+            "insight": 2,
+            "compare": 2,
+            "risk": 2,
+            "interogate": 4,
+            "future": 5,
+            "number": 1,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 1
+        }
+    },
+    "2020-02-21": {
+        "disease": {"diseaseIndex": 20, "health": 1, "death": 4, "bio": 8, "body": 3},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 2,
+            "negemo": -4,
+            "affect": -2,
+            "anger": 0,
+            "swear": 5,
+            "anxiety": 7,
+            "sad": 8,
+            "posemo": 2
+        },
+        "relation": {"relationIndex": 8, "friend": 2, "family": 3, "social": 4},
+        "economy": {"economyIndex": 3, "money": -3, "work": 1},
+        "political": {
+            "politicalIndex": 14,
+            "power": 2,
+            "cause": 0,
+            "certain": 2,
+            "insight": 0,
+            "compare": 0,
+            "risk": 4,
+            "interogate": 6,
+            "future": -3,
+            "number": 1,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 0
+        }
+    },
+    "2020-02-22": {
+        "disease": {"diseaseIndex": 19, "health": -2, "death": -4, "bio": 2, "body": -1},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": -3,
+            "negemo": 8,
+            "affect": -3,
+            "anger": 1,
+            "swear": -1,
+            "anxiety": 2,
+            "sad": 1,
+            "posemo": 2
+        },
+        "relation": {"relationIndex": 7, "friend": -1, "family": 4, "social": 0},
+        "economy": {"economyIndex": 6, "money": -4, "work": 4},
+        "political": {
+            "politicalIndex": 14,
+            "power": 2,
+            "cause": 3,
+            "certain": 3,
+            "insight": 5,
+            "compare": 3,
+            "risk": 2,
+            "interogate": 2,
+            "future": 5,
+            "number": 3,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -1
+        }
+    },
+    "2020-02-23": {
+        "disease": {"diseaseIndex": 18, "health": 7, "death": -1, "bio": 4, "body": 7},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 5,
+            "negemo": 2,
+            "affect": 0,
+            "anger": -2,
+            "swear": 5,
+            "anxiety": 6,
+            "sad": 3,
+            "posemo": 3
+        },
+        "relation": {"relationIndex": 7, "friend": 5, "family": 4, "social": -1},
+        "economy": {"economyIndex": 1, "money": 2, "work": 2},
+        "political": {
+            "politicalIndex": 18,
+            "power": -1,
+            "cause": 3,
+            "certain": 1,
+            "insight": 1,
+            "compare": -1,
+            "risk": 0,
+            "interogate": -2,
+            "future": 2,
+            "number": 4,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 2
+        }
+    },
+    "2020-02-24": {
+        "disease": {"diseaseIndex": 20, "health": 1, "death": 1, "bio": 3, "body": 4},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 0,
+            "negemo": 1,
+            "affect": -1,
+            "anger": 1,
+            "swear": 3,
+            "anxiety": 2,
+            "sad": 2,
+            "posemo": -3
+        },
+        "relation": {"relationIndex": 10, "friend": -1, "family": 8, "social": 0},
+        "economy": {"economyIndex": 7, "money": 5, "work": 2},
+        "political": {
+            "politicalIndex": 16,
+            "power": 0,
+            "cause": 5,
+            "certain": 2,
+            "insight": 3,
+            "compare": -2,
+            "risk": 7,
+            "interogate": 4,
+            "future": 1,
+            "number": 1,
+            "relig": 5,
+            "tentat": 5,
+            "quant": -1
+        }
+    },
+    "2020-02-25": {
+        "disease": {"diseaseIndex": 18, "health": -3, "death": 0, "bio": -2, "body": 8},
+        "emotion": {
+            "emotionIndex": 12,
+            "feel": 3,
+            "negemo": 5,
+            "affect": 5,
+            "anger": 4,
+            "swear": 6,
+            "anxiety": 5,
+            "sad": 0,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 5, "friend": -3, "family": 4, "social": -1},
+        "economy": {"economyIndex": 1, "money": 9, "work": 1},
+        "political": {
+            "politicalIndex": 16,
+            "power": 3,
+            "cause": 6,
+            "certain": 2,
+            "insight": 2,
+            "compare": 2,
+            "risk": 0,
+            "interogate": 7,
+            "future": -1,
+            "number": 3,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -1
+        }
+    },
+    "2020-02-26": {
+        "disease": {"diseaseIndex": 18, "health": 2, "death": 4, "bio": -4, "body": -1},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 2,
+            "negemo": 1,
+            "affect": 0,
+            "anger": -1,
+            "swear": 6,
+            "anxiety": 5,
+            "sad": 3,
+            "posemo": 3
+        },
+        "relation": {"relationIndex": 5, "friend": 5, "family": -4, "social": 2},
+        "economy": {"economyIndex": -8, "money": 7, "work": 2},
+        "political": {
+            "politicalIndex": 21,
+            "power": 2,
+            "cause": 3,
+            "certain": 5,
+            "insight": 1,
+            "compare": 1,
+            "risk": 2,
+            "interogate": 0,
+            "future": 4,
+            "number": 1,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 2
+        }
+    },
+    "2020-02-27": {
+        "disease": {"diseaseIndex": 17, "health": 6, "death": 4, "bio": 2, "body": 3},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 9,
+            "negemo": 5,
+            "affect": -1,
+            "anger": 0,
+            "swear": 7,
+            "anxiety": 2,
+            "sad": 4,
+            "posemo": 5
+        },
+        "relation": {"relationIndex": 6, "friend": 0, "family": 4, "social": 4},
+        "economy": {"economyIndex": 5, "money": 3, "work": 3},
+        "political": {
+            "politicalIndex": 16,
+            "power": 1,
+            "cause": 3,
+            "certain": 5,
+            "insight": 8,
+            "compare": 3,
+            "risk": 4,
+            "interogate": 5,
+            "future": 3,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 0
+        }
+    },
+    "2020-02-28": {
+        "disease": {"diseaseIndex": 21, "health": 3, "death": 0, "bio": -2, "body": 2},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 0,
+            "negemo": 2,
+            "affect": 3,
+            "anger": 3,
+            "swear": 1,
+            "anxiety": 1,
+            "sad": 3,
+            "posemo": 8
+        },
+        "relation": {"relationIndex": 10, "friend": 0, "family": 6, "social": 4},
+        "economy": {"economyIndex": 5, "money": -1, "work": 3},
+        "political": {
+            "politicalIndex": 14,
+            "power": 2,
+            "cause": 4,
+            "certain": 4,
+            "insight": -5,
+            "compare": 3,
+            "risk": 3,
+            "interogate": 5,
+            "future": 3,
+            "number": 3,
+            "relig": 5,
+            "tentat": 5,
+            "quant": -2
+        }
+    },
+    "2020-02-29": {
+        "disease": {"diseaseIndex": 18, "health": 4, "death": -3, "bio": -2, "body": -2},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 1,
+            "negemo": 5,
+            "affect": -4,
+            "anger": 1,
+            "swear": 11,
+            "anxiety": 7,
+            "sad": 7,
+            "posemo": 5
+        },
+        "relation": {"relationIndex": 8, "friend": 8, "family": 1, "social": 2},
+        "economy": {"economyIndex": 0, "money": -3, "work": 2},
+        "political": {
+            "politicalIndex": 12,
+            "power": 0,
+            "cause": 1,
+            "certain": -1,
+            "insight": 4,
+            "compare": 2,
+            "risk": 1,
+            "interogate": 2,
+            "future": 2,
+            "number": 2,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 4
+        }
+    },
+    "2020-03-01": {
+        "disease": {"diseaseIndex": 18, "health": 5, "death": 3, "bio": 0, "body": 5},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 10,
+            "negemo": 6,
+            "affect": -2,
+            "anger": 0,
+            "swear": 1,
+            "anxiety": 7,
+            "sad": 3,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 10, "friend": -2, "family": 1, "social": 0},
+        "economy": {"economyIndex": 6, "money": 4, "work": 3},
+        "political": {
+            "politicalIndex": 20,
+            "power": 1,
+            "cause": 0,
+            "certain": -7,
+            "insight": 2,
+            "compare": 0,
+            "risk": 3,
+            "interogate": 3,
+            "future": -5,
+            "number": -1,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 3
+        }
+    },
+    "2020-03-02": {
+        "disease": {"diseaseIndex": 21, "health": -3, "death": 3, "bio": 4, "body": 5},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": -1,
+            "negemo": -6,
+            "affect": 4,
+            "anger": -2,
+            "swear": -2,
+            "anxiety": 3,
+            "sad": 4,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 6, "friend": 3, "family": 3, "social": 0},
+        "economy": {"economyIndex": -2, "money": 1, "work": 2},
+        "political": {
+            "politicalIndex": 13,
+            "power": 1,
+            "cause": 3,
+            "certain": -1,
+            "insight": 5,
+            "compare": 6,
+            "risk": 6,
+            "interogate": 4,
+            "future": 4,
+            "number": 1,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -2
+        }
+    },
+    "2020-03-03": {
+        "disease": {"diseaseIndex": 21, "health": -5, "death": 4, "bio": 8, "body": 5},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 0,
+            "negemo": 3,
+            "affect": -2,
+            "anger": 0,
+            "swear": 5,
+            "anxiety": 0,
+            "sad": 2,
+            "posemo": -3
+        },
+        "relation": {"relationIndex": 9, "friend": -1, "family": 0, "social": 0},
+        "economy": {"economyIndex": 1, "money": 3, "work": 3},
+        "political": {
+            "politicalIndex": 16,
+            "power": 1,
+            "cause": 4,
+            "certain": -2,
+            "insight": 2,
+            "compare": 2,
+            "risk": 3,
+            "interogate": 4,
+            "future": -1,
+            "number": 2,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 3
+        }
+    },
+    "2020-03-04": {
+        "disease": {"diseaseIndex": 20, "health": 0, "death": -1, "bio": 0, "body": 6},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 0,
+            "negemo": 5,
+            "affect": 5,
+            "anger": -4,
+            "swear": 2,
+            "anxiety": 6,
+            "sad": 2,
+            "posemo": 6
+        },
+        "relation": {"relationIndex": 10, "friend": 6, "family": 3, "social": 0},
+        "economy": {"economyIndex": 0, "money": 7, "work": 2},
+        "political": {
+            "politicalIndex": 13,
+            "power": 1,
+            "cause": 3,
+            "certain": -3,
+            "insight": -2,
+            "compare": 1,
+            "risk": 2,
+            "interogate": 2,
+            "future": 9,
+            "number": 1,
+            "relig": 5,
+            "tentat": 8,
+            "quant": 0
+        }
+    },
+    "2020-03-05": {
+        "disease": {"diseaseIndex": 19, "health": 6, "death": 5, "bio": 3, "body": 6},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 2,
+            "negemo": 1,
+            "affect": -3,
+            "anger": 0,
+            "swear": 6,
+            "anxiety": 5,
+            "sad": -1,
+            "posemo": 6
+        },
+        "relation": {"relationIndex": 8, "friend": 5, "family": 0, "social": -1},
+        "economy": {"economyIndex": 3, "money": -4, "work": 2},
+        "political": {
+            "politicalIndex": 13,
+            "power": 1,
+            "cause": 5,
+            "certain": -1,
+            "insight": 7,
+            "compare": 3,
+            "risk": 0,
+            "interogate": 2,
+            "future": -1,
+            "number": 1,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 1
+        }
+    },
+    "2020-03-06": {
+        "disease": {"diseaseIndex": 19, "health": 0, "death": 6, "bio": 4, "body": 4},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 1,
+            "negemo": 5,
+            "affect": 1,
+            "anger": -1,
+            "swear": 1,
+            "anxiety": 5,
+            "sad": 9,
+            "posemo": 0
+        },
+        "relation": {"relationIndex": 7, "friend": 3, "family": 2, "social": 3},
+        "economy": {"economyIndex": 1, "money": 2, "work": 4},
+        "political": {
+            "politicalIndex": 18,
+            "power": 2,
+            "cause": 3,
+            "certain": 0,
+            "insight": -1,
+            "compare": 4,
+            "risk": 4,
+            "interogate": 2,
+            "future": 3,
+            "number": 5,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 1
+        }
+    },
+    "2020-03-07": {
+        "disease": {"diseaseIndex": 22, "health": 5, "death": 10, "bio": 3, "body": 2},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 8,
+            "negemo": 4,
+            "affect": 2,
+            "anger": 0,
+            "swear": 2,
+            "anxiety": -1,
+            "sad": 6,
+            "posemo": 6
+        },
+        "relation": {"relationIndex": 6, "friend": 5, "family": 7, "social": 3},
+        "economy": {"economyIndex": 4, "money": 5, "work": 3},
+        "political": {
+            "politicalIndex": 20,
+            "power": 1,
+            "cause": 2,
+            "certain": 2,
+            "insight": 3,
+            "compare": 2,
+            "risk": 3,
+            "interogate": 3,
+            "future": 10,
+            "number": 1,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 2
+        }
+    },
+    "2020-03-08": {
+        "disease": {"diseaseIndex": 22, "health": -1, "death": 5, "bio": 0, "body": 6},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": -1,
+            "negemo": 5,
+            "affect": 3,
+            "anger": 2,
+            "swear": 4,
+            "anxiety": 4,
+            "sad": 2,
+            "posemo": 8
+        },
+        "relation": {"relationIndex": 9, "friend": 2, "family": -2, "social": 3},
+        "economy": {"economyIndex": 1, "money": 1, "work": 1},
+        "political": {
+            "politicalIndex": 12,
+            "power": 0,
+            "cause": 3,
+            "certain": -1,
+            "insight": -8,
+            "compare": 4,
+            "risk": 2,
+            "interogate": 5,
+            "future": -2,
+            "number": 4,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 1
+        }
+    },
+    "2020-03-09": {
+        "disease": {"diseaseIndex": 20, "health": 3, "death": 3, "bio": 2, "body": 7},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": -1,
+            "negemo": 1,
+            "affect": 2,
+            "anger": 7,
+            "swear": 10,
+            "anxiety": 7,
+            "sad": 6,
+            "posemo": 5
+        },
+        "relation": {"relationIndex": 4, "friend": 3, "family": -4, "social": 5},
+        "economy": {"economyIndex": 0, "money": 1, "work": 1},
+        "political": {
+            "politicalIndex": 14,
+            "power": 0,
+            "cause": 3,
+            "certain": 0,
+            "insight": 0,
+            "compare": 5,
+            "risk": 2,
+            "interogate": 4,
+            "future": -5,
+            "number": 2,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 2
+        }
+    },
+    "2020-03-10": {
+        "disease": {"diseaseIndex": 18, "health": 2, "death": 3, "bio": 4, "body": -1},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 6,
+            "negemo": -2,
+            "affect": 2,
+            "anger": -3,
+            "swear": 7,
+            "anxiety": 9,
+            "sad": 0,
+            "posemo": 2
+        },
+        "relation": {"relationIndex": 9, "friend": 4, "family": -3, "social": 1},
+        "economy": {"economyIndex": 1, "money": 0, "work": 2},
+        "political": {
+            "politicalIndex": 17,
+            "power": 1,
+            "cause": 2,
+            "certain": -2,
+            "insight": 0,
+            "compare": 0,
+            "risk": 1,
+            "interogate": 6,
+            "future": 3,
+            "number": 3,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 0
+        }
+    },
+    "2020-03-11": {
+        "disease": {"diseaseIndex": 23, "health": -1, "death": 5, "bio": -1, "body": 4},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": -1,
+            "negemo": 1,
+            "affect": -1,
+            "anger": -4,
+            "swear": 5,
+            "anxiety": 13,
+            "sad": 2,
+            "posemo": 3
+        },
+        "relation": {"relationIndex": 13, "friend": 3, "family": 1, "social": 0},
+        "economy": {"economyIndex": 9, "money": -2, "work": 1},
+        "political": {
+            "politicalIndex": 15,
+            "power": 1,
+            "cause": 5,
+            "certain": 3,
+            "insight": -1,
+            "compare": 1,
+            "risk": 1,
+            "interogate": 3,
+            "future": 0,
+            "number": 3,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 2
+        }
+    },
+    "2020-03-12": {
+        "disease": {"diseaseIndex": 20, "health": 1, "death": 3, "bio": 2, "body": 9},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 0,
+            "negemo": 0,
+            "affect": 5,
+            "anger": 1,
+            "swear": 9,
+            "anxiety": 7,
+            "sad": 4,
+            "posemo": -2
+        },
+        "relation": {"relationIndex": 8, "friend": -2, "family": -3, "social": 1},
+        "economy": {"economyIndex": 6, "money": 3, "work": 2},
+        "political": {
+            "politicalIndex": 15,
+            "power": 1,
+            "cause": 5,
+            "certain": 3,
+            "insight": -2,
+            "compare": 3,
+            "risk": 5,
+            "interogate": 7,
+            "future": 3,
+            "number": 1,
+            "relig": 5,
+            "tentat": 7,
+            "quant": -1
+        }
+    },
+    "2020-03-13": {
+        "disease": {"diseaseIndex": 19, "health": 3, "death": 4, "bio": 2, "body": 3},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": -5,
+            "negemo": 7,
+            "affect": 3,
+            "anger": 1,
+            "swear": 2,
+            "anxiety": 5,
+            "sad": 3,
+            "posemo": 3
+        },
+        "relation": {"relationIndex": 7, "friend": -3, "family": 1, "social": -1},
+        "economy": {"economyIndex": 4, "money": 5, "work": 2},
+        "political": {
+            "politicalIndex": 16,
+            "power": 1,
+            "cause": 3,
+            "certain": 3,
+            "insight": 4,
+            "compare": 2,
+            "risk": 6,
+            "interogate": 2,
+            "future": 5,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -2
+        }
+    },
+    "2020-03-14": {
+        "disease": {"diseaseIndex": 19, "health": 0, "death": 2, "bio": 5, "body": 0},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 1,
+            "negemo": 5,
+            "affect": 3,
+            "anger": 6,
+            "swear": 6,
+            "anxiety": 6,
+            "sad": 1,
+            "posemo": 6
+        },
+        "relation": {"relationIndex": 8, "friend": 3, "family": -2, "social": -5},
+        "economy": {"economyIndex": 2, "money": 4, "work": 3},
+        "political": {
+            "politicalIndex": 13,
+            "power": 1,
+            "cause": 3,
+            "certain": -2,
+            "insight": -3,
+            "compare": 0,
+            "risk": 3,
+            "interogate": 5,
+            "future": 1,
+            "number": 4,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 3
+        }
+    },
+    "2020-03-15": {
+        "disease": {"diseaseIndex": 20, "health": 1, "death": 2, "bio": -1, "body": 5},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": -2,
+            "negemo": 0,
+            "affect": 0,
+            "anger": 2,
+            "swear": 10,
+            "anxiety": 3,
+            "sad": 6,
+            "posemo": 3
+        },
+        "relation": {"relationIndex": 8, "friend": 5, "family": 1, "social": 1},
+        "economy": {"economyIndex": 3, "money": 1, "work": 3},
+        "political": {
+            "politicalIndex": 19,
+            "power": 1,
+            "cause": 1,
+            "certain": 2,
+            "insight": -4,
+            "compare": 3,
+            "risk": 4,
+            "interogate": 6,
+            "future": 2,
+            "number": 2,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 0
+        }
+    },
+    "2020-03-16": {
+        "disease": {"diseaseIndex": 17, "health": 3, "death": 3, "bio": 5, "body": 0},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 5,
+            "negemo": -3,
+            "affect": 1,
+            "anger": -4,
+            "swear": 4,
+            "anxiety": 10,
+            "sad": 5,
+            "posemo": 1
+        },
+        "relation": {"relationIndex": 6, "friend": 4, "family": 6, "social": -1},
+        "economy": {"economyIndex": 3, "money": 0, "work": 1},
+        "political": {
+            "politicalIndex": 15,
+            "power": 1,
+            "cause": 4,
+            "certain": 2,
+            "insight": 4,
+            "compare": -3,
+            "risk": 7,
+            "interogate": 5,
+            "future": 0,
+            "number": 3,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 0
+        }
+    },
+    "2020-03-17": {
+        "disease": {"diseaseIndex": 21, "health": -2, "death": 2, "bio": -8, "body": 3},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 5,
+            "negemo": -2,
+            "affect": -3,
+            "anger": -3,
+            "swear": 11,
+            "anxiety": 1,
+            "sad": 5,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 8, "friend": 3, "family": 1, "social": -1},
+        "economy": {"economyIndex": 1, "money": 3, "work": 2},
+        "political": {
+            "politicalIndex": 15,
+            "power": 1,
+            "cause": 3,
+            "certain": 5,
+            "insight": 3,
+            "compare": 7,
+            "risk": 4,
+            "interogate": 6,
+            "future": 8,
+            "number": 1,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 3
+        }
+    },
+    "2020-03-18": {
+        "disease": {"diseaseIndex": 18, "health": 7, "death": -2, "bio": -1, "body": 9},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 6,
+            "negemo": 5,
+            "affect": 1,
+            "anger": 4,
+            "swear": 2,
+            "anxiety": 5,
+            "sad": 0,
+            "posemo": 3
+        },
+        "relation": {"relationIndex": 9, "friend": 0, "family": -4, "social": -2},
+        "economy": {"economyIndex": 3, "money": 8, "work": 3},
+        "political": {
+            "politicalIndex": 15,
+            "power": 1,
+            "cause": -1,
+            "certain": -1,
+            "insight": -4,
+            "compare": -1,
+            "risk": 1,
+            "interogate": 5,
+            "future": 4,
+            "number": 4,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 0
+        }
+    },
+    "2020-03-19": {
+        "disease": {"diseaseIndex": 17, "health": 0, "death": 4, "bio": 4, "body": -2},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 3,
+            "negemo": 1,
+            "affect": 1,
+            "anger": 2,
+            "swear": 8,
+            "anxiety": 9,
+            "sad": 4,
+            "posemo": 1
+        },
+        "relation": {"relationIndex": 4, "friend": 6, "family": 2, "social": 1},
+        "economy": {"economyIndex": 1, "money": -2, "work": 3},
+        "political": {
+            "politicalIndex": 15,
+            "power": 1,
+            "cause": 1,
+            "certain": 1,
+            "insight": 5,
+            "compare": 3,
+            "risk": 6,
+            "interogate": 5,
+            "future": -2,
+            "number": 2,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 2
+        }
+    },
+    "2020-03-20": {
+        "disease": {"diseaseIndex": 20, "health": 1, "death": 9, "bio": 4, "body": -2},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 2,
+            "negemo": 1,
+            "affect": 3,
+            "anger": -1,
+            "swear": 9,
+            "anxiety": 4,
+            "sad": 3,
+            "posemo": 2
+        },
+        "relation": {"relationIndex": 10, "friend": 2, "family": 0, "social": 1},
+        "economy": {"economyIndex": 0, "money": 1, "work": 0},
+        "political": {
+            "politicalIndex": 12,
+            "power": 2,
+            "cause": 3,
+            "certain": 4,
+            "insight": -4,
+            "compare": 4,
+            "risk": -1,
+            "interogate": 6,
+            "future": 5,
+            "number": 1,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 1
+        }
+    },
+    "2020-03-21": {
+        "disease": {"diseaseIndex": 19, "health": -1, "death": 4, "bio": 0, "body": 1},
+        "emotion": {
+            "emotionIndex": 8,
+            "feel": 4,
+            "negemo": 4,
+            "affect": -1,
+            "anger": 5,
+            "swear": 3,
+            "anxiety": 0,
+            "sad": 7,
+            "posemo": 3
+        },
+        "relation": {"relationIndex": 8, "friend": 1, "family": 6, "social": 1},
+        "economy": {"economyIndex": 3, "money": 5, "work": 4},
+        "political": {
+            "politicalIndex": 12,
+            "power": 1,
+            "cause": 4,
+            "certain": 4,
+            "insight": 4,
+            "compare": 2,
+            "risk": 5,
+            "interogate": 6,
+            "future": 3,
+            "number": 0,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 4
+        }
+    },
+    "2020-03-22": {
+        "disease": {"diseaseIndex": 21, "health": 6, "death": 3, "bio": 2, "body": 7},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 8,
+            "negemo": 3,
+            "affect": 3,
+            "anger": -1,
+            "swear": 4,
+            "anxiety": 4,
+            "sad": 3,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 10, "friend": 7, "family": 0, "social": 3},
+        "economy": {"economyIndex": 0, "money": 0, "work": 2},
+        "political": {
+            "politicalIndex": 14,
+            "power": 1,
+            "cause": 3,
+            "certain": 1,
+            "insight": 3,
+            "compare": 3,
+            "risk": 2,
+            "interogate": 3,
+            "future": 2,
+            "number": 1,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 7
+        }
+    },
+    "2020-03-23": {
+        "disease": {"diseaseIndex": 20, "health": 11, "death": -2, "bio": -2, "body": 5},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 2,
+            "negemo": 3,
+            "affect": 1,
+            "anger": -1,
+            "swear": 0,
+            "anxiety": 3,
+            "sad": -1,
+            "posemo": 3
+        },
+        "relation": {"relationIndex": 6, "friend": 1, "family": 2, "social": 2},
+        "economy": {"economyIndex": 4, "money": 3, "work": 3},
+        "political": {
+            "politicalIndex": 13,
+            "power": 0,
+            "cause": 4,
+            "certain": -2,
+            "insight": 2,
+            "compare": 7,
+            "risk": 3,
+            "interogate": 6,
+            "future": 1,
+            "number": 2,
+            "relig": 5,
+            "tentat": 6,
+            "quant": -2
+        }
+    },
+    "2020-03-24": {
+        "disease": {"diseaseIndex": 24, "health": 6, "death": 4, "bio": -1, "body": -2},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 4,
+            "negemo": 4,
+            "affect": -1,
+            "anger": 6,
+            "swear": 6,
+            "anxiety": 6,
+            "sad": 7,
+            "posemo": 6
+        },
+        "relation": {"relationIndex": 7, "friend": 2, "family": -4, "social": 4},
+        "economy": {"economyIndex": -2, "money": -1, "work": 2},
+        "political": {
+            "politicalIndex": 16,
+            "power": 0,
+            "cause": 3,
+            "certain": 7,
+            "insight": -3,
+            "compare": 1,
+            "risk": 1,
+            "interogate": -2,
+            "future": 4,
+            "number": 2,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 2
+        }
+    },
+    "2020-03-25": {
+        "disease": {"diseaseIndex": 21, "health": 1, "death": 8, "bio": -1, "body": 5},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 5,
+            "negemo": 4,
+            "affect": -1,
+            "anger": 5,
+            "swear": 4,
+            "anxiety": 4,
+            "sad": 3,
+            "posemo": 13
+        },
+        "relation": {"relationIndex": 6, "friend": 3, "family": -4, "social": 3},
+        "economy": {"economyIndex": 2, "money": 2, "work": 2},
+        "political": {
+            "politicalIndex": 19,
+            "power": 1,
+            "cause": 1,
+            "certain": 0,
+            "insight": -3,
+            "compare": 2,
+            "risk": 0,
+            "interogate": 7,
+            "future": 5,
+            "number": 2,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 1
+        }
+    },
+    "2020-03-26": {
+        "disease": {"diseaseIndex": 20, "health": 6, "death": 2, "bio": 7, "body": -1},
+        "emotion": {
+            "emotionIndex": 9,
+            "feel": 4,
+            "negemo": 3,
+            "affect": 5,
+            "anger": 4,
+            "swear": 5,
+            "anxiety": 5,
+            "sad": 3,
+            "posemo": 7
+        },
+        "relation": {"relationIndex": 9, "friend": 6, "family": 1, "social": 0},
+        "economy": {"economyIndex": 5, "money": 3, "work": 2},
+        "political": {
+            "politicalIndex": 7,
+            "power": 2,
+            "cause": 3,
+            "certain": -1,
+            "insight": 2,
+            "compare": 5,
+            "risk": 4,
+            "interogate": 3,
+            "future": 0,
+            "number": 0,
+            "relig": 5,
+            "tentat": 7,
+            "quant": 4
+        }
+    },
+    "2020-03-27": {
+        "disease": {"diseaseIndex": 17, "health": 4, "death": 1, "bio": -2, "body": 5},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": -4,
+            "negemo": 2,
+            "affect": -1,
+            "anger": 2,
+            "swear": -1,
+            "anxiety": 2,
+            "sad": 3,
+            "posemo": 4
+        },
+        "relation": {"relationIndex": 6, "friend": 5, "family": -1, "social": 1},
+        "economy": {"economyIndex": 7, "money": 5, "work": 2},
+        "political": {
+            "politicalIndex": 18,
+            "power": 2,
+            "cause": 5,
+            "certain": 5,
+            "insight": 2,
+            "compare": 0,
+            "risk": 1,
+            "interogate": 0,
+            "future": -2,
+            "number": 0,
+            "relig": 5,
+            "tentat": 8,
+            "quant": 1
+        }
+    },
+    "2020-03-28": {
+        "disease": {"diseaseIndex": 21, "health": 1, "death": 4, "bio": 0, "body": 5},
+        "emotion": {
+            "emotionIndex": 11,
+            "feel": 3,
+            "negemo": 2,
+            "affect": 4,
+            "anger": 5,
+            "swear": 8,
+            "anxiety": 6,
+            "sad": 4,
+            "posemo": 6
+        },
+        "relation": {"relationIndex": 7, "friend": 3, "family": -5, "social": 1},
+        "economy": {"economyIndex": 4, "money": 1, "work": 1},
+        "political": {
+            "politicalIndex": 14,
+            "power": 1,
+            "cause": 2,
+            "certain": 4,
+            "insight": 2,
+            "compare": -1,
+            "risk": 2,
+            "interogate": 9,
+            "future": 3,
+            "number": 3,
+            "relig": 5,
+            "tentat": 5,
+            "quant": 4
+        }
+    },
+    "2020-03-29": {
+        "disease": {"diseaseIndex": 22, "health": 5, "death": 0, "bio": 5, "body": 8},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 7,
+            "negemo": 0,
+            "affect": -3,
+            "anger": 1,
+            "swear": 6,
+            "anxiety": 7,
+            "sad": -2,
+            "posemo": 5
+        },
+        "relation": {"relationIndex": 7, "friend": 3, "family": 2, "social": -4},
+        "economy": {"economyIndex": 2, "money": 7, "work": 2},
+        "political": {
+            "politicalIndex": 17,
+            "power": 0,
+            "cause": 2,
+            "certain": 1,
+            "insight": 2,
+            "compare": 2,
+            "risk": 2,
+            "interogate": 7,
+            "future": 6,
+            "number": 3,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 0
+        }
+    },
+    "2020-03-30": {
+        "disease": {"diseaseIndex": 17, "health": 3, "death": -4, "bio": 1, "body": 2},
+        "emotion": {
+            "emotionIndex": 10,
+            "feel": 1,
+            "negemo": 6,
+            "affect": 2,
+            "anger": 0,
+            "swear": 3,
+            "anxiety": 0,
+            "sad": 9,
+            "posemo": 1
+        },
+        "relation": {"relationIndex": 7, "friend": -1, "family": 0, "social": 3},
+        "economy": {"economyIndex": 4, "money": 4, "work": 3},
+        "political": {
+            "politicalIndex": 14,
+            "power": 2,
+            "cause": 2,
+            "certain": 0,
+            "insight": 2,
+            "compare": 6,
+            "risk": 1,
+            "interogate": 6,
+            "future": 4,
+            "number": 1,
+            "relig": 5,
+            "tentat": 6,
+            "quant": 2
+        }
     }
 };
+
 
 export default TWITTER_SENTIMENT_DATA;
