@@ -1,58 +1,56 @@
 import React from "react";
 
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
-import dataJSON from "../../../../../assets/global-sentiment.json";
+import swedishSentiment from "../../../../../assets/swedish-sentiment.json";
+import globalSentiment from "../../../../../assets/global-sentiment.json";
 
 import world from "./Static/world-50m-with-population.json";
-import { eachDayOfInterval, format } from "date-fns";
+import { eachDayOfInterval, format, parseISO } from "date-fns";
 import { scaleLinear } from "d3-scale";
 
 const colorScale = scaleLinear()
-  .domain([-10, 0, 10])
-  .range(["#b30202", "#2b740d"]);
+  .domain([-10, 10])
+  .range(["red", "green"]);
 
-const startDate = "2020-04-01";
+const startDate = "2020-01-01";
+const endDate = "2020-04-03";
 
 const dates = eachDayOfInterval({
-  start: new Date(2020, 0, 1),
-  end: new Date(2020, 3, 1),
+  start: parseISO(startDate),
+  end: parseISO(endDate),
 }).map((date) => format(date, "yyyy-MM-dd"));
 
 export default class VectorMapsSentiment extends React.Component {
   constructor() {
     super();
     this.state = {
-      date: startDate,
-      data: dataJSON[startDate],
+      value: dates.length - 1,
     };
 
     this.onDateChange = this.onDateChange.bind(this);
   }
 
-  onDateChange(date) {
-    this.setState({ date, data: dataJSON[date] });
+  onDateChange(value) {
+    this.setState({ value });
   }
 
   render() {
+    const date = dates[this.state.value];
+    const dateData = globalSentiment[date];
     return (
       <React.Fragment>
         <div className="text-center mb-2">
-          <p>{this.state.date}</p>
+          <p>{date}</p>
           <input
             type="range"
             step="1"
-            list="dates"
-            min={0}
-            max={dates.length - 1}
+            min={1}
+            max={dates.length}
+            value={this.state.value}
             onChange={(e) =>
-              this.onDateChange(dates[parseInt(e.target.value, 10) - 1])
+              this.onDateChange(parseInt(e.target.value, 10) - 1)
             }
           />
-          <datalist id="dates">
-            {dates.map((date) => (
-              <option value={date}></option>
-            ))}
-          </datalist>
         </div>
         <div>
           <ComposableMap
@@ -70,19 +68,17 @@ export default class VectorMapsSentiment extends React.Component {
             <Geographies geography={world} disableOptimization>
               {(geographies, projection) =>
                 geographies.map((geography, i) => {
-                  if (!this.state.data) {
+                  if (!dateData) {
                     return null;
                   }
-                  const countryData = this.state.data.countrySentiments[
-                    geography.properties.iso_a3
-                  ];
+                  const countryData =
+                    dateData.countrySentiments[geography.properties.iso_a3];
                   const regionStyles = {
-                    fill: countryData
-                      ? colorScale(countryData.tone * 100)
-                      : "white",
+                    fill: countryData ? colorScale(countryData.tone) : "white",
                     stroke: "#adb5bd",
                     strokeWidth: 0.75,
                     outline: "none",
+                    transition: "fill 0.5s ease-out",
                   };
                   return (
                     <Geography
