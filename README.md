@@ -1,37 +1,63 @@
-#### ArchitectUI Bootstrap 4 ReactJS Theme FREE
-#### Made with love by DashboardPack.com
+## CoSENSE
+CoSENSE platform makes use of large aggregated public data from Twitter to visually communicate 
+how the variation of emotionally charged keywords changes over time with breaking events and 
+governmental policies reported in all news streams as the pandemic unfolds. CoSENSE also allows 
+for the integration of conventional surveys and other information available to governmental 
+agencies. It provides a canvas to visualize how people feel about various topics (e.g., 
+disease, money, economy) along different emotional dimensions (e.g., anger, anxiety, rationality, 
+calmness) and provide live empathetic insights into community health. The power of understanding 
+shared emotions provides opportunities to discuss and agree on actions that need to be taken to 
+address the concerns of the public.
 
-## PRO Version Available at - https://dashboardpack.com/theme-details/architectui-dashboard-react-pro
+### Technical specification
+
+* Analytics
+    * Scala
+        * Apache Spark Core
+        * SparkSQL
+        * SparkML
+        * SparkNLP
+        * GDELT
+    * Python
+        * Pandas
+        * Natural Language Toolkit
+        * Twitter REST/Streaming API
+
+* Application
+    * TypeScript (frontend)
+        * Bootstrap for the user interface
+        * React 
+        * D3 for plots, graphs, and visualisations
+        * Redux for state management
+    * Python (backend)
+        * Flask
+        * PostgreSQL
+
 
 ### Installation
-Download and uncompress the theme package archive in your desired folder location.
 
-Download and install Node.js from nodejs.org/en/download/
+1. Clone repository
 
-Install the latest version of npm. This will be useful when running all the build commands. Run the following in a command line, either your IDE's Terminal window or in a Windows Command Prompt.
+        git clone https://github.com/maxvfischer/CoSENSE.git
 
-                                                            
-    npm install --global npm@latest
-                                                            
+2. Download and install Node.js from nodejs.org/en/download/
+
+3. Install the latest version of npm. Run the following in a command line, either your IDE's Terminal window or in a Windows Command Prompt.
+
+        npm install --global npm@latest
+                                                                                                          
+4. Install the app dependencies by running the following command in the command line inside the folder root where you have unzipped the theme package archive.
+
+        npm install
                                                         
-Install the app dependencies by running the following command in the command line inside the folder root where you have unzipped the theme package archive.
+5. Start application
 
-
-    npm install
+        npm run start
                                                         
-After npm finishes installing the modules from package.json you can go ahead and start the application. To do so, run the command below.
-
-You can also use yarn to install dependencies instead of npm.
-
-
-    npm run start
-                                                        
-After the comand finished, you should see a Compiled successfully! message in your terminal window. Also, a web server service will be started so you can view your app in the browser: http://localhost:3000
 
 ### Production Build
 
 To create a production optimised build run the command below:
-
 
     npm run build
                                                         
