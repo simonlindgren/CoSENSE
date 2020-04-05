@@ -1,5 +1,0 @@
-id,timestamp,tweet,hashtags
-1111111111111111111,2020-01-01 08:47:04+00:00,"Det här är ett påhittat inlägg om coronaviruset",[]
-2222222222222222222,2020-02-01 12:18:19+00:00,"#COVID19 är ett virus och det här är en tweet",['#COVID19']
-3333333333333333333,2020-03-01 10:25:18+00:00,"Data kan förekomma om hur individer och grupper responderar på #corona",['#corona']
-4444444444444444444,2020-04-01 22:48:56+00:00,"Det här är ett fjärde och sista påhittat inlägg om covid-19",[]
