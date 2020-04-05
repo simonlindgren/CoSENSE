@@ -8,4 +8,4 @@ node_modules/*
 .idea/
 
 # ipynb checkpoints
-.ipynb_checkpoints
+/.ipynb_checkpoints
