@@ -6,3 +6,6 @@ node_modules/*
 
 # Jetbrains
 .idea/
+
+# ipynb checkpoints
+.ipynb_checkpoints
