@@ -14,7 +14,7 @@ export const UpperCategories = () => (
     transitionLeave={false}
   >
     <Row>
-      <Col lg="12">
+      <Col lg={{ size: 10, offset: 1 }}>
         <Card className="main-card mb-3">
           <CardBody>
             <CardTitle>Twitter index</CardTitle>
@@ -29,7 +29,7 @@ export const UpperCategories = () => (
               timelineLabels={[
                 {
                   date: "2020-03-22",
-                  label: "Stefan löfven håller tal",
+                  label: "Stefan Löfven håller tal",
                   fontSize: 24,
                 },
               ]}

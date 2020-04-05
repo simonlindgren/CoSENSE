@@ -10,7 +10,7 @@ const createAnnotation = (date, label, fontSize = 16) => ({
   value: date,
   borderColor: "orange",
   borderWidth: 3,
-  borderDash: [15, 2],
+  borderDash: [30, 5],
   label: {
     fontSize,
     xPadding: 12,
