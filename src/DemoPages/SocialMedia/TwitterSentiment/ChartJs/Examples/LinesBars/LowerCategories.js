@@ -22,13 +22,6 @@ export const LowerCategories = () => (
               indexTypes={{
                 disease: ["health", "death", "bio", "body"],
               }}
-              timelineLabels={[
-                {
-                  date: "2020-03-11",
-                  label: "Max 500 pers",
-                  fontSize: 24,
-                },
-              ]}
             />
           </CardBody>
         </Card>
@@ -50,13 +43,6 @@ export const LowerCategories = () => (
                   "posemo",
                 ],
               }}
-              timelineLabels={[
-                {
-                  date: "2020-03-11",
-                  label: "Max 500 pers",
-                  fontSize: 24,
-                },
-              ]}
             />
           </CardBody>
         </Card>
@@ -69,13 +55,6 @@ export const LowerCategories = () => (
               indexTypes={{
                 relation: ["friend", "family", "social"],
               }}
-              timelineLabels={[
-                {
-                  date: "2020-03-11",
-                  label: "Max 500 pers",
-                  fontSize: 24,
-                },
-              ]}
             />
           </CardBody>
         </Card>
@@ -88,13 +67,6 @@ export const LowerCategories = () => (
               indexTypes={{
                 economy: ["money", "work"],
               }}
-              timelineLabels={[
-                {
-                  date: "2020-03-11",
-                  label: "Max 500 pers",
-                  fontSize: 24,
-                },
-              ]}
             />
           </CardBody>
         </Card>
@@ -119,13 +91,6 @@ export const LowerCategories = () => (
                   "quant",
                 ],
               }}
-              timelineLabels={[
-                {
-                  date: "2020-03-11",
-                  label: "Max 500 pers",
-                  fontSize: 24,
-                },
-              ]}
             />
           </CardBody>
         </Card>

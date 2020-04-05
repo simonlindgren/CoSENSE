@@ -11,7 +11,7 @@ export const SwedenNav = [
     label: "Social media",
     content: [
       {
-        label: "Twitter sentiment",
+        label: "Twitter responses",
         to: "#/socialmedia/twitter_sentiment",
       },
     ],
