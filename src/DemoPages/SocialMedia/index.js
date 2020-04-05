@@ -85,7 +85,6 @@ const SocialMedia = ({ match }) => (
             component={UtilitiesExamples}
           />
         </div>
-        <AppFooter />
       </div>
     </div>
   </Fragment>

@@ -1,85 +1,91 @@
-import React, {Fragment} from 'react';
-import {Route} from 'react-router-dom';
+import React, { Fragment } from "react";
+import { Route } from "react-router-dom";
 
 // COMPONENTS
 
 // Tabs
 
-import TabExample from './Tabs/';
+import TabExample from "./Tabs/";
 
 // Notifications
 
-import NotificationsExamples from './Notifications/';
-
+import NotificationsExamples from "./Notifications/";
 
 // Tooltips & Popovers
 
-import TooltipsPopoversExample from './TooltipsPopovers/';
+import TooltipsPopoversExample from "./TooltipsPopovers/";
 
 // Modals
 
-import ModalsExample from './Modal/';
+import ModalsExample from "./Modal/";
 
 // Progress Bar
 
-import ProgressBarsExamples from './ProgressBar/';
+import ProgressBarsExamples from "./ProgressBar/";
 
 // Carousel
 
-import CarouselExample from './Carousel/';
+import CarouselExample from "./Carousel/";
 
 // Maps
 
-import MapsExample from './Maps/';
+import MapsExample from "./Maps/";
 
 // Layout
 
-import AppHeader from '../../Layout/AppHeader/';
-import AppSidebar from '../../Layout/AppSidebar/';
-import AppFooter from '../../Layout/AppFooter/';
+import AppHeader from "../../Layout/AppHeader/";
+import AppSidebar from "../../Layout/AppSidebar/";
+import AppFooter from "../../Layout/AppFooter/";
 
-const Components = ({match}) => (
-    <Fragment>
-        <AppHeader/>
-        <div className="app-main">
-            <AppSidebar/>
-            <div className="app-main__outer">
-                <div className="app-main__inner">
-                    {/* Components */}
+const Components = ({ match }) => (
+  <Fragment>
+    <AppHeader />
+    <div className="app-main">
+      <AppSidebar />
+      <div className="app-main__outer">
+        <div className="app-main__inner">
+          {/* Components */}
 
-                    {/* Tabs */}
+          {/* Tabs */}
 
-                    <Route path={`${match.url}/tabs`} component={TabExample}/>
+          <Route path={`${match.url}/tabs`} component={TabExample} />
 
-                    {/* Notifications */}
+          {/* Notifications */}
 
-                    <Route path={`${match.url}/notifications`} component={NotificationsExamples}/>
+          <Route
+            path={`${match.url}/notifications`}
+            component={NotificationsExamples}
+          />
 
-                    {/* Tooltips & Popovers */}
+          {/* Tooltips & Popovers */}
 
-                    <Route path={`${match.url}/tooltips-popovers`} component={TooltipsPopoversExample}/>
+          <Route
+            path={`${match.url}/tooltips-popovers`}
+            component={TooltipsPopoversExample}
+          />
 
-                    {/* Progress Bar */}
+          {/* Progress Bar */}
 
-                    <Route path={`${match.url}/progress-bar`} component={ProgressBarsExamples}/>
+          <Route
+            path={`${match.url}/progress-bar`}
+            component={ProgressBarsExamples}
+          />
 
-                    {/* Carousel */}
+          {/* Carousel */}
 
-                    <Route path={`${match.url}/carousel`} component={CarouselExample}/>
+          <Route path={`${match.url}/carousel`} component={CarouselExample} />
 
-                    {/* Modals */}
+          {/* Modals */}
 
-                    <Route path={`${match.url}/modals`} component={ModalsExample}/>
+          <Route path={`${match.url}/modals`} component={ModalsExample} />
 
-                    {/* Maps */}
+          {/* Maps */}
 
-                    <Route path={`${match.url}/maps`} component={MapsExample}/>
-
-                </div>
-                <AppFooter/>
-            </div>
+          <Route path={`${match.url}/maps`} component={MapsExample} />
         </div>
-    </Fragment>
+      </div>
+    </div>
+  </Fragment>
 );
 
 export default Components;
