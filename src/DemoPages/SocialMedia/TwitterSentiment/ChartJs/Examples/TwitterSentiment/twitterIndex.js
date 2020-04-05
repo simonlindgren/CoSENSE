@@ -38,157 +38,155 @@ const INDEXES = {
   disease: {
     diseaseIndex: {
       label: "Disease index",
-      borderColor: "rgba(75,192,192,1)",
+      borderColor: 'rgba(75,192,192,1)',
     },
     health: {
-      label: "Health index",
-      borderColor: "rgba(255,77,77,1)",
+      label: "Health",
+      borderColor: 'rgba(255,77,77,1)',
     },
     death: {
-      label: "Death index",
-      borderColor: "rgba(0,204,0, 1)",
+      label: "Death",
+      borderColor: 'rgba(0,204,0, 1)',
     },
     bio: {
-      label: "Bio index",
-      borderColor: "rgba(0,102,255,1)",
+      label: "Medical",
+      borderColor: 'rgba(0,102,255,1)',
     },
     body: {
-      label: "Body index",
-      borderColor: "rgba(153,51,255,1)",
-    },
+      label: "Symptoms",
+      borderColor: 'rgba(153,51,255,1)',
+    }
   },
   emotion: {
     emotionIndex: {
       label: "Emotion index",
-      borderColor: "rgba(153, 102, 0,1)",
+      borderColor: 'rgba(153, 102, 0,1)',
     },
     feel: {
-      label: "Feel index",
-      borderColor: "rgba(255,77,77,1)",
+      label: "Feelings",
+      borderColor: 'rgba(255,77,77,1)',
     },
     negemo: {
-      label: "Negemo index",
-      borderColor: "rgba(0,204,0, 1)",
+      label: "Negative emotions",
+      borderColor: 'rgba(0,204,0, 1)',
     },
     affect: {
-      label: "Affect index",
-      borderColor: "rgba(0,102,255,1)",
+      label: "Affect",
+      borderColor: 'rgba(0,102,255,1)',
     },
     anger: {
-      label: "Anger index",
-      borderColor: "rgba(153,51,255,1)",
+      label: "Anger",
+      borderColor: 'rgba(153,51,255,1)',
     },
-    sweat: {
-      label: "Sweat index",
-      borderColor: "rgba(204, 51, 153,1)",
+    swear: {
+      label: "Swear",
+      borderColor: 'rgba(204, 51, 153,1)',
     },
     anxiety: {
-      label: "Anxiety index",
-      borderColor: "rgba(204, 102, 0,1)",
+      label: "Anxiety",
+      borderColor: 'rgba(204, 102, 0,1)',
     },
     sad: {
-      label: "Sad index",
-      borderColor: "rgba(192, 192, 192,1)",
+      label: "Sadness",
+      borderColor: 'rgba(192, 192, 192,1)',
     },
     posemo: {
-      label: "Posemo index",
-      borderColor: "rgba(0, 102, 153,1)",
+      label: "Positive emotions",
+      borderColor: 'rgba(0, 102, 153,1)',
     },
   },
   relation: {
     relationIndex: {
       label: "Relation index",
-      borderColor: "rgba(0, 102, 153,1)",
+      borderColor: 'rgba(0, 102, 153,1)',
     },
     friend: {
-      label: "Friend index",
-      borderColor: "rgba(255,77,77,1)",
+      label: "Friends",
+      borderColor: 'rgba(255,77,77,1)',
     },
     family: {
-      label: "Family index",
-      borderColor: "rgba(0,204,0,1)",
+      label: "Family",
+      borderColor: 'rgba(0,204,0,1)',
     },
     social: {
-      label: "Social index",
-      borderColor: "rgba(0,102,255,1)",
-    },
+      label: "Community",
+      borderColor: 'rgba(0,102,255,1)',
+    }
   },
   economy: {
     economyIndex: {
       label: "Economy index",
-      borderColor: "rgba(0,102,255,1)",
+      borderColor: 'rgba(0,102,255,1)',
     },
     money: {
-      label: "Money index",
-      borderColor: "rgba(255,77,77,1)",
+      label: "Money",
+      borderColor: 'rgba(255,77,77,1)',
     },
     work: {
-      label: "Work index",
-      borderColor: "rgba(0,204,0,1)",
-    },
+      label: "Work",
+      borderColor: 'rgba(0,204,0,1)',
+    }
   },
   political: {
     politicalIndex: {
       label: "Political index",
-      borderColor: "rgba(204, 51, 153,1)",
+      borderColor: 'rgba(204, 51, 153,1)',
     },
     power: {
-      label: "Power index",
-      borderColor: "rgba(255,77,77,1)",
+      label: "Power",
+      borderColor: 'rgba(255,77,77,1)',
     },
     cause: {
-      label: "Cause index",
-      borderColor: "rgba(0,204,0, 1)",
+      label: "Cause",
+      borderColor: 'rgba(0,204,0, 1)',
     },
     certain: {
-      label: "Certain index",
-      borderColor: "rgba(0,102,255,1)",
+      label: "Certainty",
+      borderColor: 'rgba(0,102,255,1)',
     },
     insight: {
-      label: "Insight index",
-      borderColor: "rgba(153,51,255,1)",
+      label: "Insight",
+      borderColor: 'rgba(153,51,255,1)',
     },
     compare: {
-      label: "Compare index",
-      borderColor: "rgba(192, 192, 192,1)",
+      label: "Comparisons",
+      borderColor: 'rgba(192, 192, 192,1)',
     },
     risk: {
-      label: "Risk index",
-      borderColor: "rgba(204, 102, 0,1)",
+      label: "Risk",
+      borderColor: 'rgba(204, 102, 0,1)',
     },
-    interogate: {
-      label: "Interogate index",
-      borderColor: "rgba(153, 102, 0,1)",
+    interrog: {
+      label: "Questioning",
+      borderColor: 'rgba(153, 102, 0,1)',
     },
-    future: {
-      label: "Future index",
-      borderColor: "rgba(0,204,0,1)",
-    },
-    number: {
-      label: "Number index",
-      borderColor: "rgba(0,102,255,1)",
+    focusfuture: {
+      label: "Future focus",
+      borderColor: 'rgba(0,204,0,1)',
     },
     relig: {
-      label: "Religion index",
-      borderColor: "rgba(255, 102, 255,1)",
+      label: "Religion",
+      borderColor: 'rgba(255, 102, 255,1)',
     },
     tentat: {
-      label: "Tentat index",
-      borderColor: "rgba(255, 255, 26,1)",
+      label: "Uncertainty",
+      borderColor: 'rgba(255, 255, 26,1)',
     },
     quant: {
-      label: "Quant index",
-      borderColor: "rgba(153, 0, 0,1)",
-    },
+      label: "Numbers",
+      borderColor: 'rgba(153, 0, 0,1)',
+    }
   },
 };
 
-const getDataSet = (upperCategoryKey, lowerCategoryKey, data) => ({
-  label: INDEXES[upperCategoryKey][lowerCategoryKey].label,
+const getDataSet = (upperCategoryKey, lowerCategoryKey, data) => {
+  const index = INDEXES[upperCategoryKey][lowerCategoryKey];
+  return {
+  label: index.label,
   fill: false,
   lineTension: 0.1,
   backgroundColor: "rgba(75,192,192,0.4)",
-  borderColor: INDEXES[upperCategoryKey][lowerCategoryKey].borderColor,
+  borderColor: index.borderColor,
   borderCapStyle: "round",
   borderDash: [],
   borderDashOffset: 0.0,
@@ -203,7 +201,7 @@ const getDataSet = (upperCategoryKey, lowerCategoryKey, data) => ({
   pointRadius: 1,
   pointHitRadius: 10,
   data,
-});
+}};
 
 const initialState = {
   labels: [],
