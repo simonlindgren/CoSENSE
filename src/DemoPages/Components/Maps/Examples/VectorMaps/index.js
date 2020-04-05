@@ -3,12 +3,7 @@ import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import { Row, Col } from "reactstrap";
 
 // Examples
-
-import VectorMapsBasic from "./Basic";
-import VectorMapsMarkers from "./Markers";
-import VectorMapsDatasets from "./Datasets";
-import VectorMapsAnimated from "./Animated";
-import VectorMapsSentiment from "./SentimentMap";
+import WorldMapNewsSentiment from "./SentimentMap";
 
 class VectorMapsExample extends React.Component {
   render() {
@@ -24,7 +19,7 @@ class VectorMapsExample extends React.Component {
         >
           <Row>
             <Col lg="12">
-              <VectorMapsSentiment />
+              <WorldMapNewsSentiment />
             </Col>
           </Row>
         </ReactCSSTransitionGroup>

@@ -1,93 +1,94 @@
-import React, {Fragment} from 'react';
-import {Route} from 'react-router-dom';
+import React, { Fragment } from "react";
+import { Route } from "react-router-dom";
 
 // TWITTER SENTIMENT
-
-import ChartsChartJs from './TwitterSentiment/ChartJs'
-
+import ChartsChartJs from "./TwitterSentiment/ChartJs";
 // BUTTONS
-
 // Standard
-
-import ButtonsStandard from './Button/Standard/';
-
+import ButtonsStandard from "./Button/Standard/";
 // DROPDOWNS
-
-import DropdownExamples from './Dropdowns/';
+import DropdownExamples from "./Dropdowns/";
 
 // BADGES & LABELS
-
-import BadgesLabels from './BadgesLabels/';
+import BadgesLabels from "./BadgesLabels/";
 
 // ICONS
 
-import IconsExamples from './Icons/';
+import IconsExamples from "./Icons/";
 
 // CARDS
 
-import CardsExamples from './Cards/';
+import CardsExamples from "./Cards/";
 
 // LIST GROUP
-
-import ListGroupExample from '../SocialMedia/ListGroup/';
+import ListGroupExample from "../SocialMedia/ListGroup/";
 
 // NAVIGATION
-
-import NavigationExample from './Navs/';
+import NavigationExample from "./Navs/";
 
 // UTILITIES
-
-import UtilitiesExamples from '../SocialMedia/Utilities/';
+import UtilitiesExamples from "../SocialMedia/Utilities/";
 
 // Layout
-import AppHeader from '../../Layout/AppHeader/';
-import AppSidebar from '../../Layout/AppSidebar/';
-import AppFooter from '../../Layout/AppFooter/';
+import AppHeader from "../../Layout/AppHeader/";
+import AppSidebar from "../../Layout/AppSidebar/";
+import AppFooter from "../../Layout/AppFooter/";
 
-const SocialMedia = ({match}) => (
-    <Fragment>
-        <AppHeader/>
-        <div className="app-main">
-            <AppSidebar/>
-            <div className="app-main__outer">
-                <div className="app-main__inner">
+const SocialMedia = ({ match }) => (
+  <Fragment>
+    <AppHeader />
+    <div className="app-main">
+      <AppSidebar />
+      <div className="app-main__outer">
+        <div className="app-main__inner">
+          {/* Buttons */}
 
-                    {/* Buttons */}
+          <Route
+            path={`${match.url}/twitter_sentiment`}
+            component={ChartsChartJs}
+          />
 
-                    <Route path={`${match.url}/twitter_sentiment`} component={ChartsChartJs}/>
+          {/* Dropdowns */}
 
-                    {/* Dropdowns */}
+          <Route path={`${match.url}/dropdowns`} component={DropdownExamples} />
 
-                    <Route path={`${match.url}/dropdowns`} component={DropdownExamples}/>
+          {/* Badges & Labels */}
 
-                    {/* Badges & Labels */}
+          <Route path={`${match.url}/badges-labels`} component={BadgesLabels} />
 
-                    <Route path={`${match.url}/badges-labels`} component={BadgesLabels}/>
+          {/* Icons */}
 
-                    {/* Icons */}
+          <Route path={`${match.url}/icons`} component={IconsExamples} />
 
-                    <Route path={`${match.url}/icons`} component={IconsExamples}/>
+          {/* Cards */}
 
-                    {/* Cards */}
+          <Route path={`${match.url}/cards`} component={CardsExamples} />
 
-                    <Route path={`${match.url}/cards`} component={CardsExamples}/>
+          {/* List Group */}
 
-                    {/* List Group */}
+          <Route
+            path={`${match.url}/list-group`}
+            component={ListGroupExample}
+          />
 
-                    <Route path={`${match.url}/list-group`} component={ListGroupExample}/>
+          {/* Navs */}
 
-                    {/* Navs */}
+          <Route
+            path={`${match.url}/navigation`}
+            component={NavigationExample}
+          />
 
-                    <Route path={`${match.url}/navigation`} component={NavigationExample}/>
+          {/* Utilities */}
 
-                    {/* Utilities */}
-
-                    <Route path={`${match.url}/utilities`} component={UtilitiesExamples}/>
-                </div>
-                <AppFooter/>
-            </div>
+          <Route
+            path={`${match.url}/utilities`}
+            component={UtilitiesExamples}
+          />
         </div>
-    </Fragment>
+        <AppFooter />
+      </div>
+    </div>
+  </Fragment>
 );
 
 export default SocialMedia;
