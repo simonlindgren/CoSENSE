@@ -27,7 +27,11 @@ export const UpperCategories = () => (
                 political: ["politicalIndex"],
               }}
               timelineLabels={[
-                { date: "2020-03-22", label: "Stefan löfven håller tal" },
+                {
+                  date: "2020-03-22",
+                  label: "Stefan löfven håller tal",
+                  fontSize: 24,
+                },
               ]}
             />
           </CardBody>

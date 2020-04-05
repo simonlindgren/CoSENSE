@@ -3,7 +3,7 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 import TWITTER_SENTIMENT_DATA from "./twitterSentiment";
 
-const createAnnotation = (date, label) => ({
+const createAnnotation = (date, label, fontSize = 16) => ({
   type: "line",
   mode: "vertical",
   scaleID: "x-axis-0",
@@ -12,6 +12,9 @@ const createAnnotation = (date, label) => ({
   borderWidth: 3,
   borderDash: [15, 2],
   label: {
+    fontSize,
+    xPadding: 12,
+    yPadding: 12,
     content: label,
     enabled: true,
     position: "top",
@@ -254,17 +257,10 @@ const Graph = createReactClass({
   },
 });
 
-class TwitterIndex extends React.Component {
-  render() {
-    return (
-      <div>
-        <Graph
-          indexTypes={this.props.indexTypes}
-          timelineLabels={this.props.timelineLabels}
-        />
-      </div>
-    );
-  }
-}
+const TwitterIndex = ({ indexTypes, timelineLabels }) => (
+  <div>
+    <Graph indexTypes={indexTypes} timelineLabels={timelineLabels} />
+  </div>
+);
 
 export default TwitterIndex;
