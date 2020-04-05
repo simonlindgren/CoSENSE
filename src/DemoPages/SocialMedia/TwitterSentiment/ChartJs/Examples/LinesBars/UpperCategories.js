@@ -30,6 +30,7 @@ export const UpperCategories = () => (
                 {
                   date: "2020-03-22",
                   label: "Stefan Löfven håller tal",
+                  link: "https://svt.se",
                   fontSize: 24,
                 },
               ]}

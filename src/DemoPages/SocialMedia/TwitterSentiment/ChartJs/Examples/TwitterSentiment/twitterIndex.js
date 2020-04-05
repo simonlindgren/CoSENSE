@@ -3,7 +3,7 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 import TWITTER_SENTIMENT_DATA from "./twitterSentiment";
 
-const createAnnotation = (date, label, fontSize = 16) => ({
+const createAnnotation = (date, label, link, fontSize = 16) => ({
   type: "line",
   mode: "vertical",
   scaleID: "x-axis-0",
@@ -18,6 +18,26 @@ const createAnnotation = (date, label, fontSize = 16) => ({
     content: label,
     enabled: true,
     position: "top",
+  },
+  onClick: () => {
+    if (!link) {
+      return;
+    }
+    window.open(link, "_blank");
+  },
+  onMouseenter: () => {
+    if (!link) {
+      return;
+    }
+    const element = document.getElementById("line-canvas");
+    element.style = "cursor: pointer";
+  },
+  onMouseleave: () => {
+    if (!link) {
+      return;
+    }
+    const element = document.getElementById("line-canvas");
+    element.style = "";
   },
 });
 
@@ -245,15 +265,18 @@ const Graph = createReactClass({
   render() {
     const { timelineLabels } = this.props;
     const annotations = timelineLabels
-      ? timelineLabels.map(({ date, label }) => createAnnotation(date, label))
+      ? timelineLabels.map(({ date, label, link, fontSize }) =>
+          createAnnotation(date, label, link, fontSize)
+        )
       : [];
     const options = {
       ...CHART_OPTIONS,
       annotation: {
+        events: ["click", "mouseenter", "mouseleave"],
         annotations,
       },
     };
-    return <Line data={this.state} options={options} />;
+    return <Line id="line-canvas" data={this.state} options={options} />;
   },
 });
 
