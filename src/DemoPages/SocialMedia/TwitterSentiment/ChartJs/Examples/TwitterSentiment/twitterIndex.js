@@ -2,6 +2,7 @@ import "chartjs-plugin-annotation";
 import React from "react";
 import { Line } from "react-chartjs-2";
 import TWITTER_SENTIMENT_DATA from "./twitterSentiment";
+import { parseISO, isAfter } from "date-fns";
 
 const createAnnotation = (date, label, fontSize = 16) => ({
   type: "line",
@@ -216,7 +217,8 @@ const Graph = createReactClass({
     this.setState(initialState);
   },
   componentDidMount() {
-    var dates = Object.keys(TWITTER_SENTIMENT_DATA);
+    const startDate = parseISO("2020-01-20");
+    var dates = Object.keys(TWITTER_SENTIMENT_DATA).filter((date) => isAfter(parseISO(date), startDate));
     var upperCategories = Object.keys(this.props.indexTypes);
 
     const datasets = upperCategories.reduce((acc, upperCategoryKey) => {
