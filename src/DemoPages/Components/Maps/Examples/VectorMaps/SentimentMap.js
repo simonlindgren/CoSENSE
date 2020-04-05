@@ -8,9 +8,7 @@ import world from "./Static/world-50m-with-population.json";
 import { eachDayOfInterval, format, parseISO } from "date-fns";
 import { scaleLinear } from "d3-scale";
 
-const colorScale = scaleLinear()
-  .domain([-10, 10])
-  .range(["red", "green"]);
+const colorScale = scaleLinear().domain([-10, 10]).range(["red", "green"]);
 
 const startDate = "2020-01-01";
 const endDate = "2020-04-03";
@@ -20,7 +18,7 @@ const dates = eachDayOfInterval({
   end: parseISO(endDate),
 }).map((date) => format(date, "yyyy-MM-dd"));
 
-export default class VectorMapsSentiment extends React.Component {
+export default class WorldMapNewsSentiment extends React.Component {
   constructor() {
     super();
     this.state = {
