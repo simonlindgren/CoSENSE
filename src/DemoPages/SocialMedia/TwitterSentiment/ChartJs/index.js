@@ -31,7 +31,7 @@ const ChartJSExamples = () => (
     <PageTitle
       heading="Twitter responses"
       subheading="Feeling analysis performed on Swedish tweets"
-      icon="pe-7s-bandaid icon-gradient bg-amy-crisp"
+      icon="pe-7s-world icon-gradient bg-amy-crisp"
     />
     <Tabs
       tabsWrapperClass="body-tabs body-tabs-layout"
