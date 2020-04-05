@@ -24,14 +24,11 @@ address the concerns of the public.
         * Twitter REST/Streaming API
 
 * Application
-    * TypeScript (frontend)
+    * JavaScript (frontend)
         * Bootstrap for the user interface
         * React 
         * D3 for plots, graphs, and visualisations
         * Redux for state management
-    * Python (backend)
-        * Flask
-        * PostgreSQL
 
 
 ### Installation
